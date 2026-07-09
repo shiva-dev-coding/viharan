@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Viharan - The Bihar Tourism Guide</title>
+
+    <!-- 1. YouTube Style Short SEO Tags (Google Discovery) -->
+    <meta name="keywords" content="bihar, bihar tourism, famous places in bihar, bihar food, litti chokha, madhubani painting, nalanda university, rajgir, bodh gaya, viharan, patna sahib, travel bihar, tourist spots, bihari culture">
+    <meta name="description" content="Viharan: The Ultimate Bihar Tourism Guide. Explore top 10 famous places, authentic traditional foods, and rich historical culture.">
+    <meta name="author" content="Viharan Developer">
+
+    <!-- 2. Premium Temporary Live Favicon (Browser Tab Icon) -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/826/826070.png">
+
+    <!-- 3. Google Fonts (Aapki website ka text premium dikhane ke liye) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- 4. Social Media Sharing Tags (WhatsApp/FB Card preview ke liye) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Viharan - Explore the Soul of Bihar">
+    <meta property="og:description" content="Discover top 10 places, authentic foods, and vibrant culture of Bihar.">
+    <meta property="og:image" content="index_images/Bihar image.webp">
+
+    <!-- 5. Future Analytics Placeholder (Traffic track karne ke liye code taiyar hai) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKINGID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TRACKINGID');
+    </script>
+
+    
+
+    <style>
+        body {
+            
+            font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            margin: 40px auto; 
+            max-width: 900px;
+            padding: 0 20px;
+            background-color: #fcfbf7;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        /* --- OPTION 2: PIPELINE NAVIGATION STYLE --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            margin: 10px auto 50px auto;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0; 
+            max-width: 100%;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 16px;
+            color: #4a5568; 
+            text-decoration: none;
+            padding: 5px 25px;
+            position: relative;
+        }
+
+        nav a:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 25%;
+            height: 50%;
+            width: 1px;
+            background-color: #cbd5e1; 
+        }
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: #b85c00;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover {
+            color: #b85c00;
+        }
+
+        nav a:hover::before {
+            width: 60%; 
+        }
+
+        h1 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 40px;
+            clear: both;
+        }
+
+        h2 {
+            color: #b85c00;
+            border-bottom: 1px solid #e2e8f0; 
+            padding-bottom: 8px;
+            margin-top: 10px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-card, .home-card {
+            background-color: #ffffff; 
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 45px;       
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-card:hover, .home-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-title {
+            font-size: 22px;
+            color: #1a202c;
+            font-weight: bold;
+            margin-bottom: 25px;
+            display: block;
+            text-align: left;
+        }
+
+        img {
+            display: block;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+            max-width: 100%;
+            height: auto !important;
+        }
+
+        .hero-img {
+            max-width: 70%;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 20px;
+            text-align: justify;
+            border-left: 3px solid #b85c00;
+            padding-left: 15px;
+            background-color: #fffaf5;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="food.html">Famous Foods</a>
+        <a href="culture.html">Culture</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <h1 style="text-align: center; font-family: sans-serif;">
+        <span style="color: #FF9933;">Top 10</span> 
+        <span style="color: #555555;">Famous Places</span> 
+        <span style="color: rgba(0, 98, 255, 0.758);">in Bihar</span>
+    </h1>
+    
+    <div class="main-card">
+        <img src="index_images/Bihar image.webp" class="hero-img" alt="Map of Bihar state in eastern India showing boundaries with neighboring Uttar Pradesh, Jharkhand, West Bengal, and Nepal, with blue river systems and Patna marked on the map.">
+        <p>Bihar is a state in eastern India known for its rich history, cultural heritage, and religious significance. Here are the top 10 famous places to visit in Bihar:</p>
+        <p>It is home to several ancient temples, universities, and historical sites that reflect its rich cultural legacy.</p>
+        <p>Some of the most famous places in Bihar include the Mahabodhi Temple in Bodh Gaya, which is a UNESCO World Heritage Site and an important pilgrimage site for Buddhists. The ruins of Nalanda University, one of the oldest universities in the world, are also located in Bihar. Other notable places include Rajgir, Patna Sahib Gurudwara, Barabar Caves, Kesaria Stupa, Vaishali, Chhath Puja Ghats in Patna, Sasaram Tomb of Sher Shah Suri, and Mahavir Temple.</p>
+        <p>These places offer a glimpse into Bihar's rich history, religious diversity, and architectural marvels. Whether you are interested in spirituality, history, or simply want to explore the beauty of Bihar, these famous places are a must-visit.</p>
+    </div>
+
+    <ul>
+        <li>
+            <div class="home-card">
+                <span class="card-title">1. Mahabodhi Temple, Bodh Gaya - UNESCO World Heritage Site.</span>
+                <img src="index_images/Mahabodhi Temple.jpg" alt="Mahabodhi Temple" width="500">
+                <p>Mahabodhi Temple is a UNESCO World Heritage Site located in Bodh Gaya, Bihar. It is one of the most important Buddhist pilgrimage sites in the world, as it is believed to be the place where Siddhartha Gautama, the Buddha, attained enlightenment under the Bodhi tree.</p>
+                <p>The temple complex consists of a main stupa, several smaller stupas, and various shrines and monasteries. The architecture of the temple is a blend of Indian and Buddhist styles, with intricate carvings and sculptures depicting scenes from the life of the Buddha. The Mahabodhi Temple attracts thousands of pilgrims and tourists every year, who come to pay their respects and seek spiritual solace.</p>
+                <p>Visitors can also explore the nearby Bodhi tree, which is a direct descendant of the original tree under which the Buddha meditated. The temple complex is surrounded by beautiful gardens and offers a serene atmosphere for meditation and reflection. Overall, the Mahabodhi Temple is a must-visit destination for anyone interested in Buddhism, history, and spirituality.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">2. Vikramshila University, Bhagalpur - Ancient center of Buddhist learning.</span>
+                <img src="index_images/Vikramshila University.jpg" alt="Vikramshila University Ruins" width="500">
+                <p>Vikramshila University was an ancient center of learning located in the present-day Bhagalpur district of Bihar, India. It was established during the Pala dynasty in the 8th century and was one of the two most important centers of Buddhist learning in India, along with Nalanda University. Vikramshila University played a significant role in the development of Buddhist philosophy, literature, and culture.</p>
+                <p>The university was known for its rigorous academic curriculum, which included subjects such as Buddhist philosophy, logic, grammar, medicine, and mathematics. It attracted scholars and students from various parts of India and other countries, including Tibet, China, and Southeast Asia. The university had a well-organized administrative structure and was supported by the royal patronage of the Pala rulers.</p>
+                <p>Vikramshila University was eventually destroyed during the invasions of the 12th century, and its ruins can still be seen today. Archaeological excavations have revealed the remains of the university's buildings, including classrooms, monasteries, and stupas. The site is now a protected monument and serves as a reminder of Bihar's rich educational and cultural heritage.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">3. Nalanda University, Nalanda - Ancient center of Buddhist learning.</span>
+                <img src="index_images/Nalanda University.webp" alt="Ancient brick ruins of Nalanda University showing tall structures, stairways, and excavated foundations set against a sparse green landscape in Bihar, reflecting the architectural grandeur and historical significance of this once-thriving center of Buddhist learning." width="500">   
+                <p>Nalanda University was an ancient center of learning located in the present-day Nalanda district of Bihar, India. It was established during the Gupta dynasty in the 5th century and flourished as a major center of Buddhist education and scholarship for several centuries. Nalanda University attracted students and scholars from various parts of India and other countries, including China, Korea, Japan, Tibet, and Southeast Asia.</p>
+                <p>The university had a well-organized academic structure, with a curriculum that included subjects such as Buddhist philosophy, logic, grammar, medicine, mathematics, and astronomy. It had a large library known as the "Dharmaganja," which housed thousands of manuscripts and texts. The university also had residential facilities for students and teachers, as well as monasteries and temples within its campus.</p>
+                <p>Nalanda University was eventually destroyed during the invasions of the 12th century, and its ruins can still be seen today. Archaeological excavations have revealed the remains of the university's buildings, including classrooms, monasteries, and stupas. The site is now a UNESCO World Heritage Site and serves as a reminder of Bihar's rich educational and cultural heritage.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">4. Rajgir, Nalanda - Historic city with rich cultural heritage.</span>
+                <img src="index_images/Rajgir nalanda.jpg" alt="Rajgir" width="500">   
+                <p>Rajgir is a historic city located in the Nalanda district of Bihar, India. It is known for its rich cultural and religious heritage, as well as its scenic beauty. Rajgir has been an important center for Buddhism and Jainism, and it is believed to have been the first capital of the Magadha kingdom.</p>
+                <p>The city is surrounded by hills and is home to several ancient monuments, including the ruins of the Rajgir Fort, which dates back to the 6th century BCE. Rajgir is also famous for its hot springs, which are believed to have medicinal properties. The city is a popular destination for pilgrims and tourists alike, who come to explore its historical sites and enjoy its natural beauty.</p>
+                <p>Rajgir is also known for its association with Lord Buddha, who is said to have spent several years in the city, delivering sermons and meditating. The Vulture's Peak, a hill in Rajgir, is believed to be the place where Buddha gave many important teachings. Overall, Rajgir is a must-visit destination for those interested in history, religion, and nature.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">5. Patna Sahib Gurudwara, Patna - Prominent Sikh shrine.</span>
+                <img src="index_images/Patna Sahib Gurudwara.webp" alt="Patna Sahib Gurudwara" width="500">
+                <p>Patna Sahib Gurudwara, also known as Takht Sri Patna Sahib, is a prominent Sikh shrine located in Patna, Bihar, India. It is one of the five Takhts (thrones) of Sikhism and holds great religious significance for Sikhs around the world. The Gurudwara is dedicated to Guru Gobind Singh, the tenth Sikh Guru, who was born in Patna in 1666.</p>
+                <p>The Gurudwara complex consists of several buildings, including the main prayer hall, the Guru's birthplace, and various other facilities for devotees. The architecture of the Gurudwara is a blend of traditional Sikh and Mughal styles, with intricate carvings and beautiful frescoes adorning the walls. The Gurudwara also houses a museum that showcases artifacts related to Guru Gobind Singh and Sikh history.</p>
+                <p>Patna Sahib Gurudwara attracts thousands of pilgrims and tourists every year, who come to pay their respects and seek spiritual solace. The Gurudwara is known for its warm hospitality, and visitors can partake in the community kitchen (Langar) that serves free meals to all. Overall, Patna Sahib Gurudwara is a must-visit destination for those interested in Sikhism, history, and spirituality.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">6. Barabar Caves, Jehanabad - Ancient rock-cut caves.</span>
+                <img src="index_images/Barabar cave.webp" alt="Barabar Caves" width="500">
+                <p>The Barabar Caves are a group of ancient rock-cut caves located in the Jehanabad district of Bihar, India. They are believed to have been carved during the Mauryan period (3rd century BCE) and are considered to be some of the oldest surviving rock-cut caves in India. The caves were primarily used by Buddhist monks for meditation and religious practices.</p>
+                <p>The Barabar Caves consist of several chambers, each with a unique architectural style. The most famous caves are the Lomas Rishi Cave and the Sudama Cave, which feature intricately carved entrances and polished interiors. The caves are known for their excellent acoustics, which allowed monks to chant and meditate in a serene environment.</p>
+                <p>The Barabar Caves are an important archaeological and historical site, attracting tourists and researchers interested in ancient Indian architecture and Buddhist history. The caves are surrounded by lush greenery and offer a peaceful setting for visitors to explore and appreciate the rich cultural heritage of Bihar.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">7. Kesaria Stupa, Kesaria - One of the largest stupas in India.</span>
+                <img src="index_images/Kesaria Stupa.webp" alt="Kesaria Stupa" width="500">
+                <p>The Kesaria Stupa is a significant Buddhist monument located in Kesaria, Bihar, India. It is one of the largest stupas in the country and is believed to have been built during the Mauryan period. The stupa is an important site for Buddhist pilgrims and researchers interested in ancient Indian Buddhism.</p>
+                <p>The Kesaria Stupa is constructed in a circular shape and is made of bricks. It stands at a height of approximately 104 feet and has a diameter of around 120 feet. The stupa is surrounded by a series of smaller stupas and other structures, which are believed to have been used for religious and ceremonial purposes. The site has been excavated by archaeologists, revealing various artifacts and inscriptions that provide insights into the history and significance of the stupa.</p>
+                <p>The Kesaria Stupa is an important cultural and historical landmark in Bihar, attracting tourists and pilgrims from around the world. Visitors can explore the site, learn about its history, and appreciate the architectural and artistic achievements of ancient Indian civilization. The stupa is also a place for meditation and reflection, offering a serene environment for those seeking spiritual solace.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">8. Sher Shah Suri Tomb, Sasaram - Beautiful lake tomb.</span>   
+                <img src="index_images/sher shah shuri tomb.webp" alt="Sher Shah Suri Tomb" width="500"> 
+                <p>The Sher Shah Suri Tomb is a beautiful lake tomb located in Sasaram, Bihar, India. It is the final resting place of Sher Shah Suri, the founder of the Suri dynasty and a prominent ruler of India during the 16th century. The tomb is an architectural marvel and is considered one of the finest examples of Indo-Islamic architecture in India.</p>
+                <p>The tomb is built on a raised platform in the middle of an artificial lake, creating a stunning reflection of the structure in the water. The tomb is constructed using red sandstone and features intricate carvings, arches, and domes. The main chamber houses the cenotaph of Sher Shah Suri, while the surrounding area includes gardens and pathways for visitors to explore.</p>
+                <p>The Sher Shah Suri Tomb is a popular tourist destination and attracts visitors from around the world who come to admire its architectural beauty and historical significance. The serene setting of the tomb, combined with its rich history, makes it a must-visit location for those interested in India's cultural heritage.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+                <span class="card-title">9. Valmiki National Park, West Champaran - Nature and Wildlife.</span>
+                <img src="index_images/Valmiki National Park.jpg" alt="Valmiki National Park" width="500">
+                <p>Valmiki National Park is a protected area located in the West Champaran district of Bihar, India. It is named after the sage Valmiki, the author of the epic Ramayana. The park is known for its rich biodiversity and is home to a variety of flora and fauna, including several endangered species.</p>
+                <p>The park covers an area of approximately 800 square kilometers and is characterized by dense forests, grasslands, and wetlands. It is a popular destination for wildlife enthusiasts and nature lovers, offering opportunities for bird watching, trekking, and wildlife safaris. The park is home to several species of mammals, birds, reptiles, and amphibians, making it an important conservation area in the region.</p>
+                <p>Valmiki National Park is also known for its scenic beauty, with picturesque landscapes and serene surroundings. Visitors can explore the park's various trails and enjoy the tranquility of nature. The park is a great place for eco-tourism and provides an opportunity to learn about the importance of wildlife conservation and environmental protection.</p>
+            </div>
+        </li>
+
+        <li>
+            <div class="home-card">
+               <span class="card-title">10. Jal Mandir, Pawapuri - Sacred floating temple.</span>
+               <img src="index_images/jal mandir.webp" alt="Jal Mandir" width="500">  
+               <p>Jal Mandir is a sacred floating temple located in Pawapuri, Bihar, India. It is an important pilgrimage site for Jains and is believed to be the place where Lord Mahavira, the 24th Tirthankara of Jainism, attained nirvana. The temple is situated in the middle of a lotus-filled pond, creating a serene and picturesque setting.</p>
+               <p>The temple is constructed using white marble and features intricate carvings and sculptures depicting scenes from the life of Lord Mahavira. Devotees and visitors can reach the temple by crossing a small bridge that connects the temple to the shore. The pond surrounding the temple is considered sacred, and it is believed that taking a dip in its waters can purify one's soul.</p>
+               <p>Jal Mandir attracts thousands of pilgrims and tourists every year, who come to pay their respects and seek spiritual solace. The temple is a symbol of peace and devotion, and its tranquil surroundings make it a perfect place for meditation and reflection. Overall, Jal Mandir is a must-visit destination for those interested in Jainism, spirituality, and architectural beauty.</p>
+            </div>
+        </li>
+    </ul>
+    
+</body>
+</html>
