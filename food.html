@@ -5,287 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traditional Foods of Bihar | Taste the Culture</title>
 
-
-    <!-- 1. YouTube Style Short SEO Tags (Google Discovery) -->
     <meta name="keywords" content="bihar, bihar tourism, famous places in bihar, bihar food, litti chokha, madhubani painting, nalanda university, rajgir, bodh gaya, viharan, patna sahib, travel bihar, tourist spots, bihari culture">
     <meta name="description" content="Viharan: The Ultimate Bihar Tourism Guide. Explore top 10 famous places, authentic traditional foods, and rich historical culture.">
     <meta name="author" content="Viharan Developer">
 
-    <!-- 2. Premium Temporary Live Favicon (Browser Tab Icon) -->
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/826/826070.png">
-
-    <!-- 3. Google Fonts (Aapki website ka text premium dikhane ke liye) -->
+    <!-- Custom Royal Heritage Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- 4. Social Media Sharing Tags (WhatsApp/FB Card preview ke liye) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Viharan - Explore the Soul of Bihar">
-    <meta property="og:description" content="Discover top 10 places, authentic foods, and vibrant culture of Bihar.">
-    <meta property="og:image" content="index_images/Bihar image.webp">
-
-    <!-- 5. Future Analytics Placeholder (Traffic track karne ke liye code taiyar hai) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKINGID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-TRACKINGID');
-    </script>
-
-    
     <style>
-        body {
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
         
-            font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.8;
-            margin: 40px auto; 
-            max-width: 900px;
-            padding: 0 20px;
-            background-color: #fcfbf7;
-            color: #2c3e50;
-            text-align: center;
+        nav { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 700; color: #ff5a22; }
+        .nav-links a { text-decoration: none; color: #444; font-weight: 600; margin-left: 25px; transition: color 0.3s; position: relative; padding-bottom: 5px; }
+        .nav-links a:hover, .nav-links a.active { color: #ff5a22; }
+        .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: #ff5a22; border-radius: 2px; }
+
+        .banner { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Food Bihar banner.jpg'); background-size: cover; background-position: center; height: 300px; display: flex; justify-content: center; align-items: center; color: white; text-align: center; margin-bottom: 40px; }
+        .banner h1 { font-size: 40px; font-weight: 700; }
+
+        .content-container { max-width: 900px; margin: 0 auto; padding: 0 20px 50px 20px; }
+        .item-section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .item-title { font-size: 26px; color: #222; margin-bottom: 15px; font-weight: 700; border-left: 5px solid #ff5a22; padding-left: 15px; text-align: left; }
+        .item-img { width: 100%; max-height: auto; object-fit: content; border-radius: 8px; margin-bottom: 20px; display: block; }
+        .item-desc { font-size: 16px; color: #555; text-align: justify; margin-bottom: 15px; }
+        
+        footer { background-color: #222; color: white; text-align: center; padding: 20px; font-size: 14px; }
+
+        .item-desc, .place-desc {
+        position: relative;
+        padding-left: 20px !important; /* Text ko thoda aage shift karne ke liye */}
+
+        .item-desc::before, .place-desc::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px; /* Text ke center me align karne ke liye */
+        width: 4px;
+        height: 18px;
+        background: linear-gradient(135deg, #ff5a22, #ff7a45); /* Dual tone premium orange gradient */
+        border-radius: 20px; /* Rounded corners jo ekdum modern lagte hain */
+        box-shadow: 0 2px 6px rgba(255, 90, 34, 0.3); /* Halka sa orange glow effect */
         }
 
-        /* --- OPTION 2: PIPELINE NAVIGATION STYLE --- */
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0;
-            margin: 10px auto 50px auto;
-            padding: 15px 0;
-            border-bottom: 1px solid #e2e8f0; 
-            max-width: 100%;
-        }
-
-        nav a {
-            font-weight: 600;
-            font-size: 16px;
-            color: #4a5568; 
-            text-decoration: none;
-            padding: 5px 25px;
-            position: relative;
-        }
-
-        nav a:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 25%;
-            height: 50%;
-            width: 1px;
-            background-color: #cbd5e1; 
-        }
-
-        nav a::before {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background-color: #b85c00;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        nav a:hover {
-            color: #b85c00;
-        }
-
-        nav a:hover::before {
-            width: 60%; 
-        }
-
-        h1 {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 40px;
-            clear: both;
-        }
-
-        .main-intro {
-            font-size: 18px;
-            color: #5a6578;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px auto;
-            line-height: 1.9;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .food-card {
-            background-color: #ffffff; 
-            border: 1px solid rgba(226, 232, 240, 0.8);
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 45px;       
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .food-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
-        }
-
-        .card-title {
-            font-size: 22px;
-            color: #1a202c;
-            font-weight: bold;
-            margin-bottom: 25px;
-            display: block;
-            text-align: left;
-        }
-
-        img {
-            display: block;
-            margin: 30px auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
-            max-width: 100%;
-            height: auto !important;
-        }
-
-        p {
-            font-size: 16px;
-            color: #4a5568;
-            margin-bottom: 20px;
-            text-align: justify;
-            border-left: 3px solid #b85c00;
-            padding-left: 15px;
-            background-color: #fffaf5;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-radius: 0 8px 8px 0;
-        }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="food.html">Famous Foods</a>
-        <a href="culture.html">Culture</a>
-        <a href="about.html">About</a>
+        <div class="logo">Viharan</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="food.html" class="active">Famous Foods</a>
+            <a href="culture.html">Culture</a>
+            <a href="places.html">Tourist Places</a>
+            <a href="about.html">About</a>
+        </div>
     </nav>
 
-    <h1 style="text-align: center; font-family: sans-serif;">
-        <span style="color: #FF9933;">Famous Foods</span> 
-        <span style="color: #555555;">of</span> 
-        <span style="color: rgba(0, 98, 255, 0.758);">Bihar</span>
-    </h1>
+    <div class="banner">
+        <h1>Famous Foods of Bihar</h1>
+    </div>
 
-    <p class="main-intro">Bihar is not only famous for its history but also for its mouth-watering traditional cuisine...</p>
+    <div class="content-container">
+        <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px;">Bihar is not only famous for its history but also for its mouth-watering traditional cuisine...</p>
 
-    <ul>
-        <li>
-            <div class="food-card">
-                <span class="card-title">1. Litti Chokha - Signature dish of Bihar.</span>
-                <img src="food_images/Litti Chokha.webp" alt="Authentic Bihari Litti Chokha Plate" width="500">
-                <p>Litti Chokha is the most famous dish of Bihar.</p>
-                <p>Litti Chokha is the proud signature dish and culinary identity of Bihar. Littis are smoky, baked whole wheat dough balls stuffed with a flavorful mixture of spiced sattu (roasted gram flour), mixed with mustard oil and pickle spices, then dipped in pure ghee. It is traditionally served with Chokha, a delicious mash of roasted brinjals, tomatoes, and potatoes cooked over an open fire, making it a healthy and rustic treat.</p>
-                <p>It is a dish that reflects the simplicity and richness of Bihari cuisine, often enjoyed with a dollop of ghee and accompanied by pickles or chutneys.</p>
-            </div> 
-        </li>
+        <!-- 1 -->
+        <div class="item-section">
+            <h2 class="item-title">1. Litti Chokha - Signature dish of Bihar.</h2>
+            <img src="food_images/Litti Chokha.webp" alt="Authentic Bihari Litti Chokha Plate" class="item-img">
+            <p class="item-desc">Litti Chokha is the most famous dish of Bihar.</p>
+            <p class="item-desc">Litti Chokha is the proud signature dish and culinary identity of Bihar. Littis are smoky, baked whole wheat dough balls stuffed with a flavorful mixture of spiced sattu (roasted gram flour), mixed with mustard oil and pickle spices, then dipped in pure ghee. It is traditionally served with Chokha, a delicious mash of roasted brinjals, tomatoes, and potatoes cooked over an open fire, making it a healthy and rustic treat.</p>
+            <p class="item-desc">It is a dish that reflects the simplicity and richness of Bihari cuisine, often enjoyed with a dollop of ghee and accompanied by pickles or chutneys.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">2. Naushahi / Silao ka Khaja - Sweet delicacy of Bihar.</span>
-                <img src="food_images/Silao ka Khaja.avif" alt="Naushahi / Silao ka Khaja" width="500">
-                <p>Naushahi, also known as Silao ka Khaja, is a traditional sweet delicacy from Bihar. It is made from layers of thin dough that are deep-fried and then soaked in sugar syrup, resulting in a crispy and sweet treat. This dessert is often enjoyed during festivals and special occasions, and it holds a special place in the hearts of Bihari people.</p>
-                <p>Naushahi is known for its unique texture and rich flavor, making it a favorite among locals and visitors alike. It is often served with tea or as a dessert after meals, and its preparation is considered an art form, passed down through generations.</p>
-                <p>In Bihar, Naushahi is not just a sweet; it is a symbol of celebration and togetherness, often shared among family and friends during festive times.</p>
-            </div>
-        </li>
+        <!-- 2 -->
+        <div class="item-section">
+            <h2 class="item-title">2. Naushahi / Silao ka Khaja - Sweet delicacy of Bihar.</h2>
+            <img src="food_images/Silao ka Khaja.avif" alt="Naushahi / Silao ka Khaja" class="item-img">
+            <p class="item-desc">Naushahi, also known as Silao ka Khaja, is a traditional sweet delicacy from Bihar. It is made from layers of thin dough that are deep-fried and then soaked in sugar syrup, resulting in a crispy and sweet treat. This dessert is often enjoyed during festivals and special occasions, and it holds a special place in the hearts of Bihari people.</p>
+            <p class="item-desc">Naushahi is known for its unique texture and rich flavor, making it a favorite among locals and visitors alike. It is often served with tea or as a dessert after meals, and its preparation is considered an art form, passed down through generations.</p>
+            <p class="item-desc">In Bihar, Naushahi is not just a sweet; it is a symbol of celebration and togetherness, often shared among family and friends during festive times.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">3. Malpua - Popular dessert in Bihar.</span>
-                <img src="food_images/Malpua.webp" alt="Malpua" width="500">
-                <p>Malpua is a popular dessert in Bihar, especially during festivals and special occasions. It is a sweet pancake made from a batter of flour, milk, and sugar, often flavored with cardamom and sometimes garnished with nuts. The batter is deep-fried to create a golden-brown treat that is crispy on the outside and soft on the inside.</p>
-                <p>Malpua is often served with rabri, a thickened sweetened milk, enhancing its rich flavor. It is a beloved dessert that brings joy to celebrations and is cherished by people of all ages in Bihar.</p>
-                <p>In Bihar, Malpua is not just a dessert; it is a symbol of festivity and togetherness, often enjoyed with family and friends during special occasions.</p>
-            </div>
-        </li>
+        <!-- 3 -->
+        <div class="item-section">
+            <h2 class="item-title">3. Malpua - Popular dessert in Bihar.</h2>
+            <img src="food_images/Malpua.webp" alt="Malpua" class="item-img">
+            <p class="item-desc">Malpua is a popular dessert in Bihar, especially during festivals and special occasions. It is a sweet pancake made from a batter of flour, milk, and sugar, often flavored with cardamom and sometimes garnished with nuts. The batter is deep-fried to create a golden-brown treat that is crispy on the outside and soft on the inside.</p>
+            <p class="item-desc">Malpua is often served with rabri, a thickened sweetened milk, enhancing its rich flavor. It is a beloved dessert that brings joy to celebrations and is cherished by people of all ages in Bihar.</p>
+            <p class="item-desc">In Bihar, Malpua is not just a dessert; it is a symbol of festivity and togetherness, often enjoyed with family and friends during special occasions.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">4. Dahi Chuda - Yummy yogurt-based dish.</span>
-                <img src="food_images/Dahi Chuda.webp" alt="Dahi Chuda" width="500">
-                <p>Dahi Chuda is a traditional Bihari dish made from flattened rice (chuda) mixed with yogurt (dahi) and often sweetened with jaggery or sugar. It is a simple yet delicious dish that is commonly consumed as a breakfast or snack. The combination of the soft, tangy yogurt with the crunchy flattened rice creates a delightful texture and flavor.</p>
-                <p>Dahi Chuda is not only tasty but also nutritious, providing a good balance of carbohydrates and protein. It is a popular dish during the summer months, as it is light and refreshing, making it a favorite among the people of Bihar.</p>
-                <p>In Bihar, Dahi Chuda is more than just a dish; it is a part of the local culinary tradition, often enjoyed with family and friends, and is a testament to the simplicity and richness of Bihari cuisine.</p>    
-            </div>
-        </li>
+        <!-- 4 -->
+        <div class="item-section">
+            <h2 class="item-title">4. Dahi Chuda - Yummy yogurt-based dish.</h2>
+            <img src="food_images/Dahi Chuda.webp" alt="Dahi Chuda" class="item-img">
+            <p class="item-desc">Dahi Chuda is a traditional Bihari dish made from flattened rice (chuda) mixed with yogurt (dahi) and often sweetened with jaggery or sugar. It is a simple yet delicious dish that is commonly consumed as a breakfast or snack. The combination of the soft, tangy yogurt with the crunchy flattened rice creates a delightful texture and flavor.</p>
+            <p class="item-desc">Dahi Chuda is not only tasty but also nutritious, providing a good balance of carbohydrates and protein. It is a popular dish during the summer months, as it is light and refreshing, making it a favorite among the people of Bihar.</p>
+            <p class="item-desc">In Bihar, Dahi Chuda is more than just a dish; it is a part of the local culinary tradition, often enjoyed with family and friends, and is a testament to the simplicity and richness of Bihari cuisine.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">5. Sattu Paratha - Nutritious flatbread.</span>
-                <img src="food_images/Sattu Paratha.webp" alt="Sattu Paratha" width="500">
-                <p>Sattu Paratha is a nutritious flatbread made from roasted gram flour (sattu) mixed with spices and stuffed into whole wheat dough. It is then rolled out and cooked on a griddle until golden brown. Sattu Paratha is a popular dish in Bihar, known for its high protein content and energy-boosting properties.</p>
-                <p>This dish is often served with yogurt, pickles, or chutneys, making it a wholesome meal. Sattu Paratha is not only delicious but also a staple in the Bihari diet, especially during the summer months, as it helps in keeping the body cool and hydrated.</p>
-                <p>In Bihar, Sattu Paratha is more than just a meal; it is a reflection of the local culinary heritage, cherished for its taste, nutrition, and cultural significance.</p>
-            </div>
-        </li>
+        <!-- 5 -->
+        <div class="item-section">
+            <h2 class="item-title">5. Sattu Paratha - Nutritious flatbread.</h2>
+            <img src="food_images/Sattu Paratha.webp" alt="Sattu Paratha" class="item-img">
+            <p class="item-desc">Sattu Paratha is a nutritious flatbread made from roasted gram flour (sattu) mixed with spices and stuffed into whole wheat dough. It is then rolled out and cooked on a griddle until golden brown. Sattu Paratha is a popular dish in Bihar, known for its high protein content and energy-boosting properties.</p>
+            <p class="item-desc">This dish is often served with yogurt, pickles, or chutneys, making it a wholesome meal. Sattu Paratha is not only delicious but also a staple in the Bihari diet, especially during the summer months, as it helps in keeping the body cool and hydrated.</p>
+            <p class="item-desc">In Bihar, Sattu Paratha is more than just a meal; it is a reflection of the local culinary heritage, cherished for its taste, nutrition, and cultural significance.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">6. Thekua - Traditional sweet of Bihar.</span>
-                <img src="food_images/Thekua.jpeg" alt="Thekua" width="500">
-                <p>Thekua is a traditional sweet from Bihar, often prepared during festivals and special occasions. It is made from whole wheat flour, jaggery, and ghee, shaped into small discs or squares, and deep-fried until golden brown. Thekua has a unique texture that is both crispy on the outside and soft on the inside, with a rich, sweet flavor.</p>
-                <p>This sweet is not only delicious but also holds cultural significance, especially during the Chhath Puja festival, where it is offered to the Sun God as a symbol of devotion and gratitude. Thekua is a beloved treat in Bihar, enjoyed by people of all ages and cherished for its taste and traditional value.</p>
-                <p>In Bihar, Thekua is more than just a sweet; it is a representation of the region's culinary heritage, passed down through generations and celebrated for its unique flavor and cultural importance.</p>  
-            </div>
-        </li>
+        <!-- 6 -->
+        <div class="item-section">
+            <h2 class="item-title">6. Thekua - Traditional sweet of Bihar.</h2>
+            <img src="food_images/Thekua.jpeg" alt="Thekua" class="item-img">
+            <p class="item-desc">Thekua is a traditional sweet from Bihar, often prepared during festivals and special occasions. It is made from whole wheat flour, jaggery, and ghee, shaped into small discs or squares, and deep-fried until golden brown. Thekua has a unique texture that is both crispy on the outside and soft on the inside, with a rich, sweet flavor.</p>
+            <p class="item-desc">This sweet is not only delicious but also holds cultural significance, especially during the Chhath Puja festival, where it is offered to the Sun God as a symbol of devotion and gratitude. Thekua is a beloved treat in Bihar, enjoyed by people of all ages and cherished for its taste and traditional value.</p>
+            <p class="item-desc">In Bihar, Thekua is more than just a sweet; it is a representation of the region's culinary heritage, passed down through generations and celebrated for its unique flavor and cultural importance.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">7. Chana Ghugni - Spicy black chickpea snack.</span>
-                <img src="food_images/Chana Ghugni.webp" alt="Chana Ghugni" width="500">
-                <p>Chana Ghugni is a highly popular and spicy evening snack or breakfast dish in Bihar. It is made from black chickpeas (kala chana) slow-cooked with a rich blend of onions, tomatoes, and local spices like roasted cumin and garam masala. It is traditionally garnished with fresh coriander, green chilies, and served hot along with roasted flattened rice (Bhuja) or Kachoris.</p>
-                <p>Chana Ghugni is not only delicious but also a nutritious dish, providing a good source of protein and fiber. It is often enjoyed during the winter months, as it is warming and hearty, making it a favorite among locals and visitors alike.</p>
-                <p>In Bihar, Chana Ghugni is more than just a snack; it is a reflection of the region's culinary diversity and a testament to the rich flavors and spices that define Bihari cuisine.</p>
-            </div>
-        </li>
+        <!-- 7 -->
+        <div class="item-section">
+            <h2 class="item-title">7. Chana Ghugni - Spicy black chickpea snack.</h2>
+            <img src="food_images/Chana Ghugni.webp" alt="Chana Ghugni" class="item-img">
+            <p class="item-desc">Chana Ghugni is a highly popular and spicy evening snack or breakfast dish in Bihar. It is made from black chickpeas (kala chana) slow-cooked with a rich blend of onions, tomatoes, and local spices like roasted cumin and garam masala. It is traditionally garnished with fresh coriander, green chilies, and served hot along with roasted flattened rice (Bhuja) or Kachoris.</p>
+            <p class="item-desc">Chana Ghugni is not only delicious but also a nutritious dish, providing a good source of protein and fiber. It is often enjoyed during the winter months, as it is warming and hearty, making it a favorite among locals and visitors alike.</p>
+            <p class="item-desc">In Bihar, Chana Ghugni is more than just a snack; it is a reflection of the region's culinary diversity and a testament to the rich flavors and spices that define Bihari cuisine.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">8. Sattu Sharbat - The ultimate natural energy drink.</span>
-                <img src="food_images/Sattu Sharbat.webp" alt="Bihari Sattu Sharbat" width="500">
-                <p>Sattu Sharbat is the ultimate, refreshing summer drink and a natural energy booster native to Bihar. Made by mixing roasted gram flour (sattu) with chilled water, fresh lemon juice, black salt, and roasted cumin powder, it comes in both savory and sweet versions. The savory version is often garnished with finely chopped onions, green chilies, and coriander, making it a healthy, high-protein drink that keeps the body cool.</p>
-                <p>Sattu Sharbat is not only a thirst-quencher but also a traditional remedy for heat exhaustion, making it a staple during the hot summer months in Bihar. It is cherished for its simplicity, nutritional value, and ability to provide instant energy.</p>
-                <p>In Bihar, Sattu Sharbat is more than just a drink; it is a symbol of the region's culinary ingenuity, reflecting the local culture and lifestyle, and is enjoyed by people of all ages for its refreshing taste and health benefits.</p>
-            </div>
-        </li>
+        <!-- 8 -->
+        <div class="item-section">
+            <h2 class="item-title">8. Sattu Sharbat - The ultimate natural energy drink.</h2>
+            <img src="food_images/Sattu Sharbat.webp" alt="Bihari Sattu Sharbat" class="item-img">
+            <p class="item-desc">Sattu Sharbat is the ultimate, refreshing summer drink and a natural energy booster native to Bihar. Made by mixing roasted gram flour (sattu) with chilled water, fresh lemon juice, black salt, and roasted cumin powder, it comes in both savory and sweet versions. The savory version is often garnished with finely chopped onions, green chilies, and coriander, making it a healthy, high-protein drink that keeps the body cool.</p>
+            <p class="item-desc">Sattu Sharbat is not only a thirst-quencher but also a traditional remedy for heat exhaustion, making it a staple during the hot summer months in Bihar. It is cherished for its simplicity, nutritional value, and ability to provide instant energy.</p>
+            <p class="item-desc">In Bihar, Sattu Sharbat is more than just a drink; it is a symbol of the region's culinary ingenuity, reflecting the local culture and lifestyle, and is enjoyed by people of all ages for its refreshing taste and health benefits.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">9. Bihari Khichdi - The Saturday special comfort food.</span>
-                <img src="food_images/Bihari Khichdi.jpg" alt="Bihari Khichdi Plate" width="500">
-                <p>Bihari Khichdi is not just a dish, but a Saturday ritual in almost every Bihari household. Unlike regular dry khichdi, it has a semi-liquid consistency made by cooking rice and moong dal together with ghee, ginger, turmeric, and minimal spices. It is famously served as a grand platter complete with its four mandatory companions, perfectly captured in the local saying: "Khichdi ke chaar yaar—Dahi, Papad, Ghee aur Aachar," along with a side of freshly mashed Chokha.</p>
-                <p>Bihari Khichdi is more than just comfort food; it is a culinary tradition that brings families together, especially on weekends. The dish is cherished for its simplicity, nutritional value, and the warmth it brings to the dining table. It is often enjoyed with a dollop of ghee and accompanied by pickles or chutneys, making it a wholesome and satisfying meal.</p>
-                <p>In Bihar, Bihari Khichdi is a symbol of home-cooked goodness, reflecting the region's culinary heritage and the importance of family meals in Bihari culture.</p>
-            </div>
-        </li>
+        <!-- 9 -->
+        <div class="item-section">
+            <h2 class="item-title">9. Bihari Khichdi - The Saturday special comfort food.</h2>
+            <img src="food_images/Bihari Khichdi.jpg" alt="Bihari Khichdi Plate" class="item-img">
+            <p class="item-desc">Bihari Khichdi is not just a dish, but a Saturday ritual in almost every Bihari household. Unlike regular dry khichdi, it has a semi-liquid consistency made by cooking rice and moong dal together with ghee, ginger, turmeric, and minimal spices. It is famously served as a grand platter complete with its four mandatory companions, perfectly captured in the local saying: "Khichdi ke chaar yaar—Dahi, Papad, Ghee aur Aachar," along with a side of freshly mashed Chokha.</p>
+            <p class="item-desc">Bihari Khichdi is more than just comfort food; it is a culinary tradition that brings families together, especially on weekends. The dish is cherished for its simplicity, nutritional value, and the warmth it brings to the dining table. It is often enjoyed with a dollop of ghee and accompanied by pickles or chutneys, making it a wholesome and satisfying meal.</p>
+            <p class="item-desc">In Bihar, Bihari Khichdi is a symbol of home-cooked goodness, reflecting the region's culinary heritage and the importance of family meals in Bihari culture.</p>
+        </div>
 
-        <li>
-            <div class="food-card">
-                <span class="card-title">10. Sitamarhi ki Balushahi - The traditional flaky sweet donut.</span>
-                <img src="food_images/Sitamarhi ki Balushahi.webp" alt="Sitamarhi Balushahi" width="500">
-                <p>Balushahi is a legendary sweet dish of Bihar, with the town of Runni Saidpur in Sitamarhi being globally famous for it. Often described as the Indian equivalent of a glazed donut, it is made of refined flour dough mixed with ghee, shaped into rounds with a dimple in the center, and deep-fried on a very low flame until flaky. It is then soaked in sugar syrup, resulting in a sweet that is beautifully crisp on the outside and delightfully juicy inside.</p>
-                <p>Balushahi is not just a dessert; it is a cultural icon in Bihar, often enjoyed during festivals and special occasions. Its unique texture and rich flavor make it a favorite among locals and visitors alike. The preparation of Balushahi is considered an art form, passed down through generations, and is a testament to the culinary heritage of Bihar.</p>
-                <p>In Bihar, Balushahi is more than just a sweet; it is a symbol of celebration and togetherness, often shared among family and friends during festive times, and cherished for its traditional value and exquisite taste.</p>
-            </div>
-        </li>
-    </ul>
-    
+        <!-- 10 -->
+        <div class="item-section">
+            <h2 class="item-title">10. Sitamarhi ki Balushahi - The traditional flaky sweet donut.</h2>
+            <img src="food_images/Sitamarhi ki Balushahi.webp" alt="Sitamarhi Balushahi" class="item-img">
+            <p class="item-desc">Balushahi is a legendary sweet dish of Bihar, with the town of Runni Saidpur in Sitamarhi being globally famous for it. Often described as the Indian equivalent of a glazed donut, it is made of refined flour dough mixed with ghee, shaped into rounds with a dimple in the center, and deep-fried on a very low flame until flaky. It is then soaked in sugar syrup, resulting in a sweet that is beautifully crisp on the outside and delightfully juicy inside.</p>
+            <p class="item-desc">Balushahi is not just a dessert; it is a cultural icon in Bihar, often enjoyed during festivals and special occasions. Its unique texture and rich flavor make it a favorite among locals and visitors alike. The preparation of Balushahi is considered an art form, passed down through generations, and is a testament to the culinary heritage of Bihar.</p>
+            <p class="item-desc">In Bihar, Balushahi is more than just a sweet; it is a symbol of celebration and togetherness, often shared among family and friends during festive times, and cherished for its traditional value and exquisite taste.</p>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Viharan Tourism Guide. Designed with ❤️ for Bihar.</p></footer>
 </body>
 </html>
