@@ -1,174 +1,404 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culture of Bihar | Rich Heritage & Traditions</title>
+    <title>Culture &amp; Heritage | Viharan - The Bihar Tourism Guide</title>
+    <meta name="description" content="Discover Bihar's rich culture including Chhath Puja, Madhubani Painting, Kohbar Art, Manjusha Art, Sujini Embroidery, Sikki Grass Craft, and Sonepur Mela.">
 
-    <meta name="keywords" content="bihar, bihar tourism, famous places in bihar, bihar food, litti chokha, madhubani painting, nalanda university, rajgir, bodh gaya, viharan, patna sahib, travel bihar, tourist spots, bihari culture">
-    <meta name="description" content="Viharan: The Ultimate Bihar Tourism Guide. Explore top 10 famous places, authentic traditional foods, and rich historical culture.">
-    <meta name="author" content="Viharan Developer">
-
-    <!-- Custom Royal Heritage Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    
+    <meta name="theme-color" content="#070b14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="responsive.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
-        
-        nav { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: 700; color: #ff5a22; }
-        .nav-links a { text-decoration: none; color: #444; font-weight: 600; margin-left: 25px; transition: color 0.3s; position: relative; padding-bottom: 5px; }
-        .nav-links a:hover, .nav-links a.active { color: #ff5a22; }
-        .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: #ff5a22; border-radius: 2px; }
-
-        .banner { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Culture Bihar banner.jpg'); background-size: cover; background-position: center; height: 300px; display: flex; justify-content: center; align-items: center; color: white; text-align: center; margin-bottom: 40px; }
-        .banner h1 { font-size: 40px; font-weight: 700; }
-
-        .content-container { max-width: 900px; margin: 0 auto; padding: 0 20px 50px 20px; }
-        .item-section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .item-title { font-size: 26px; color: #222; margin-bottom: 15px; font-weight: 700; border-left: 5px solid #ff5a22; padding-left: 15px; text-align: left; }
-        .item-img { width: 100%; max-height: auto; object-fit: content; border-radius: 8px; margin-bottom: 20px; display: block; }
-        .item-desc { font-size: 16px; color: #555; text-align: justify; margin-bottom: 15px; }
-        
-        footer { background-color: #222; color: white; text-align: center; padding: 20px; font-size: 14px; }
-
-        .item-desc, .place-desc {
-        position: relative;
-        padding-left: 20px !important; /* Text ko thoda aage shift karne ke liye */}
-
-        .item-desc::before, .place-desc::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 6px; /* Text ke center me align karne ke liye */
-        width: 4px;
-        height: 18px;
-        background: linear-gradient(135deg, #ff5a22, #ff7a45); /* Dual tone premium orange gradient */
-        border-radius: 20px; /* Rounded corners jo ekdum modern lagte hain */
-        box-shadow: 0 2px 6px rgba(255, 90, 34, 0.3); /* Halka sa orange glow effect */
+        :root {
+            --bg-primary: #070b14;
+            --surface-glass: rgba(17, 25, 45, 0.75);
+            --surface-glass-hover: rgba(24, 35, 62, 0.9);
+            --border-glass: rgba(255, 255, 255, 0.09);
+            --border-accent: rgba(245, 158, 11, 0.45);
+            --accent-gold: #f59e0b;
+            --accent-amber: #fbbf24;
+            --accent-cyan: #38bdf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --radius-lg: 20px;
+            --transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.65;
+            background-image:
+                radial-gradient(circle at 18% 15%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 82% 78%, rgba(168, 85, 247, 0.07) 0%, transparent 42%);
+        }
+
+        h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+
+        .navbar {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(7, 11, 20, 0.85); backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 0.9rem 5%; display: flex; align-items: center; justify-content: space-between;
+        }
+
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+        .logo-badge {
+            width: 42px; height: 42px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent-gold), #d97706);
+            display: grid; place-items: center;
+            font-family: 'Cinzel', serif; font-weight: 800; font-size: 1.35rem; color: #070b14;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif; font-size: 1.55rem; font-weight: 800;
+            background: linear-gradient(90deg, #fff, var(--accent-amber));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links { display: flex; list-style: none; gap: 8px; }
+
+        .nav-links a {
+            text-decoration: none; color: var(--text-secondary); font-weight: 600;
+            font-size: 0.94rem; padding: 0.55rem 1.1rem; border-radius: 999px; transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #070b14;
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-gold));
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+        }
+
+        .menu-toggle {
+            display: none; background: var(--surface-glass); border: 1px solid var(--border-glass);
+            color: var(--text-primary); font-size: 1.4rem; padding: 6px 12px; border-radius: 10px; cursor: pointer;
+        }
+
+        .page-banner {
+            position: relative; min-height: 52vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 4rem 5%; overflow: hidden;
+        }
+
+        .banner-bg {
+            position: absolute; inset: 0;
+            background: url('Culture Bihar banner.jpg') center/cover no-repeat;
+            filter: brightness(0.38) saturate(1.15);
+            z-index: -2;
+        }
+
+        .banner-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(7, 11, 20, 0.5), var(--bg-primary));
+            z-index: -1;
+        }
+
+        .page-banner h1 {
+            font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+            background: linear-gradient(135deg, #fff, #fde68a, #f59e0b);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 0.8rem;
+        }
+
+        .page-banner p { color: var(--text-secondary); max-width: 680px; margin: 0 auto; font-size: 1.08rem; }
+
+        .culture-grid {
+            max-width: 1240px;
+            margin: 2.5rem auto 5.5rem;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 26px;
+        }
+
+        .culture-card {
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .culture-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-accent);
+            background: var(--surface-glass-hover);
+            box-shadow: 0 16px 40px rgba(245, 158, 11, 0.2);
+        }
+
+        .culture-img {
+            position: relative;
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .culture-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .culture-card:hover .culture-img img { transform: scale(1.08); }
+
+        .culture-tag {
+            position: absolute; top: 12px; left: 12px;
+            background: rgba(7, 11, 20, 0.85); backdrop-filter: blur(8px);
+            color: var(--accent-amber); border: 1px solid var(--border-accent);
+            padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 700;
+        }
+
+        .culture-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .culture-body h3 {
+            font-size: 1.32rem;
+            color: var(--text-primary);
+            margin-bottom: 0.55rem;
+        }
+
+        .culture-body p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .culture-footer {
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border-glass);
+            font-size: 0.82rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        footer {
+            background: #04070d; border-top: 1px solid var(--border-glass);
+            padding: 2.5rem 5%; text-align: center; color: var(--text-muted); font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(7, 11, 20, 0.96); backdrop-filter: blur(20px);
+                flex-direction: column; padding: 1.2rem 5%;
+                border-bottom: 1px solid var(--border-glass); display: none;
+            }
+            .nav-links.open { display: flex; }
+            .culture-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Viharan</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="food.html">Famous Foods</a>
-            <a href="culture.html" class="active">Culture</a>
-            <a href="places.html">Tourist Places</a>
-            <a href="about.html">About</a>
-        </div>
+    <nav class="navbar">
+        <a href="index.html" class="logo-wrap">
+            <div class="logo-badge">V</div>
+            <span class="logo-text">VIHARAN</span>
+        </a>
+        <button class="install-button" id="installButton" type="button">Install App</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="culture.html" class="active">Culture</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
     </nav>
+    <p class="install-help" id="installHelp" role="status" aria-live="polite" hidden></p>
 
-    <div class="banner">
-        <h1>Vibrant Culture of Bihar</h1>
-    </div>
-
-    <div class="content-container">
-        <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px;">Bihar is not only famous for its history but also for its deep-rooted traditions, ancient festivals, and incredible folk arts that have thrived for centuries...</p>
-
-        <!-- 1 -->
-        <div class="item-section">
-            <h2 class="item-title">1. Chhath Puja - The Mahaparv of Bihar.</h2>
-            <img src="culture_images/Chhath Puja.webp" alt="Chhath Puja" class="item-img">
-            <p class="item-desc">Chhath Puja is the most prominent and spiritually significant festival of Bihar, dedicated to the Sun God and Chhathi Maiya.</p>
-            <p class="item-desc">Celebrated with unmatched purity, strict spiritual discipline, and rigorous fasting without water (Nirjala), it is a unique four-day festival. Devotees stand in knee-deep river waters to offer prayers and 'Arghya' during sunset and sunrise, creating a breathtaking sight of unity and faith.</p>
-            <p class="item-desc">The festival requires making sacred offerings like 'Thekua' on traditional clay stoves, reflecting a deep bond between humans, purity, and nature that cuts across all social boundaries.</p>
+    <header class="page-banner">
+        <div class="banner-bg"></div>
+        <div class="banner-overlay"></div>
+        <div>
+            <h1>Living Culture, Art &amp; Festivals</h1>
+            <p>Experience the timeless devotion of Chhath Puja, GI-tagged Mithila paintings, intricate handicrafts, and historic fairs.</p>
         </div>
+    </header>
 
-        <!-- 2 -->
-        <div class="item-section">
-            <h2 class="item-title">2. Madhubani Painting - Ancient folk art form.</h2>
-            <img src="culture_images/Madhubani Painting.jpg" alt="Madhubani Painting" class="item-img">
-            <p class="item-desc">Originating from the Mithila region of Bihar, Madhubani painting (Mithila Art) is a globally celebrated heritage folk art form.</p>
-            <p class="item-desc">Traditionally created by village women on the freshly plastered mud walls and floors of huts during festivals, it utilizes eye-catching geometric patterns and intricate line drawings. The art leaves completely no empty spaces, filling gaps with beautiful flowers, birds, and animals.</p>
-            <p class="item-desc">What makes it truly special is that artisans rely strictly on natural colors extracted from plants, flowers, and charcoal, reflecting the deep connection between rural life and nature.</p>
-        </div>
+    <main class="culture-grid">
 
-        <!-- 3 -->
-        <div class="item-section">
-            <h2 class="item-title">3. Sonepur Mela - Asia's largest traditional fair.</h2>
-            <img src="culture_images/Sonepur Mela.jpeg" alt="Sonepur Mela" class="item-img">
-            <p class="item-desc">Sonepur Mela, held on the auspicious day of Kartik Poornima on the banks of river Gandak, is famous worldwide as Asia's largest cattle fair.</p>
-            <p class="item-desc">Historically, great emperors like Chandragupta Maurya used to buy elephants and premium breeds of horses from this very fair for their armies. Today, it stretches across several weeks, combining ancient traditions with modern entertainment.</p>
-            <p class="item-desc">The mela features everything from beautifully decorated elephants to massive markets of local rural handicrafts, handlooms, food stalls, and vibrant folk theater performances.</p>
-        </div>
+        <!-- 1. Chhath Puja -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">Mahaparva Festival</span>
+                <img src="culture_images/Chhath Puja.webp" alt="Chhath Puja">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Chhath Puja</h3>
+                    <p>Bihar's grandest eco-friendly Vedic festival dedicated to Surya Dev (the Sun God) and Chhathi Maiya. Millions gather along riverbanks at sunset and sunrise to offer Arghya with bamboo soops, sugarcane, and Thekua without priests or idol worship.</p>
+                </div>
+                <div class="culture-footer">Celebrated: Kartika Shukla Shashthi (Oct/Nov)</div>
+            </div>
+        </article>
 
-        <!-- 4 -->
-        <div class="item-section">
-            <h2 class="item-title">4. Sikki Grass Craft - The golden grass art.</h2>
-            <img src="culture_images/Sikki Grass Craft.jpg" alt="Sikki Grass Craft" class="item-img">
-            <p class="item-desc">Sikki Grass Craft is a unique traditional handicraft from the Mithila region of Bihar, known as the golden thread of the state.</p>
-            <p class="item-desc">It is made using a special wild grass called 'Sikki' that turns a stunning golden metallic color when dried. Local rural women artisans dye this grass in vibrant colors and weave it beautifully with absolute precision without using any modern machines.</p>
-            <p class="item-desc">They create beautiful daily-use items like traditional storage baskets (Pauti), toys, jewelry boxes, and decorative hangings, showcasing incredible rural creativity.</p>
-        </div>
+        <!-- 2. Madhubani Painting -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">GI-Tagged Folk Art</span>
+                <img src="culture_images/Madhubani Painting.jpg" alt="Madhubani Painting">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Madhubani (Mithila) Painting</h3>
+                    <p>Dating back to the Ramayana era, Mithila painting uses natural plant-derived pigments, twigs, and nib pens to create geometric patterns, mythological epics, and nature motifs with zero empty space left on the canvas.</p>
+                </div>
+                <div class="culture-footer">Region: Madhubani &amp; Darbhanga, Mithila</div>
+            </div>
+        </article>
 
-        <!-- 5 -->
-        <div class="item-section">
-            <h2 class="item-title">5. Manjusha Art - Ancient scroll painting form.</h2>
-            <img src="culture_images/Manjusha Art.webp" alt="Manjusha Art of Bihar" class="item-img">
-            <p class="item-desc">Manjusha Art is an ancient folk art form originating from the Ang region (modern-day Bhagalpur) of Bihar, making it one of the oldest heritage arts of the state.</p>
-            <p class="item-desc">Unlike other art forms, Manjusha painting is a sequential story-telling art that revolves entirely around the folklore of Bihula and Mansa (the snake goddess). It is also traditionally known as snake painting because serpent designs are present in almost every artwork.</p>
-            <p class="item-desc">What makes it completely unique is that it strictly uses only three colors—Pink, Green, and Yellow—and every painting is bounded by specific geometric borders, showcasing a beautiful historic tradition.</p>
-        </div>
+        <!-- 3. Kohbar Art -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">Sacred Wedding Mural</span>
+                <img src="culture_images/Kohbar Art.webp" alt="Kohbar Art">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Kohbar Art</h3>
+                    <p>A deeply symbolic branch of Mithila art painted on the walls of the bridal chamber (Kohbar Ghar). Featuring lotus leaves, bamboo groves, fish, and tortoises, Kohbar symbolizes fertility, prosperity, and marital harmony.</p>
+                </div>
+                <div class="culture-footer">Tradition: Maithil Matrimonial Heritage</div>
+            </div>
+        </article>
 
-        <!-- 6 -->
-        <div class="item-section">
-            <h2 class="item-title">6. Mithila Makhana Cultivation - Global heritage of Bihar.</h2>
-            <img src="culture_images/Mithila Makhana Cultivation.jpg" alt="Makhana Cultivation in Bihar ponds" class="item-img">
-            <p class="item-desc">Mithila Makhana (Fox Nut) cultivation is a proud and globally unique agricultural heritage of Bihar. Over 80% to 90% of the entire world's makhana supply comes directly from the water bodies of North Bihar.</p>
-            <p class="item-desc">The process of harvesting makhana is extremely tough and considered a highly skilled traditional art passed down through generations. Local farmers dive deep into stagnant ponds filled with thorny lotus-like leaves to carefully collect the seeds from the mud beds at the bottom.</p>
-            <p class="item-desc">These collected seeds are then washed, sun-dried, and manually roasted at very high temperatures before being popped with wooden mallets. This traditional superfood officially holds the prestigious GI tag, representing Bihar's rich natural wealth.</p>
-        </div>
+        <!-- 4. Manjusha Art -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">Angika Scroll Art</span>
+                <img src="culture_images/Manjusha Art.webp" alt="Manjusha Art">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Manjusha Art</h3>
+                    <p>Originating in the Anga region (Bhagalpur), Manjusha is a sequential narrative art form painted exclusively in pink, green, and yellow—depicting the timeless folklore of Bihula and Bala Lakhindar on temple-shaped ceremonial boxes.</p>
+                </div>
+                <div class="culture-footer">Region: Bhagalpur (Anga Region)</div>
+            </div>
+        </article>
 
-        <!-- 7 -->
-        <div class="item-section">
-            <h2 class="item-title">7. Sujini Embroidery - Beautiful storytelling textile art.</h2>
-            <img src="culture_images/Sujini Embroidery.webp" alt="Sujini Embroidery" class="item-img">
-            <p class="item-desc">Sujini Embroidery is a subtle and exquisite traditional textile craft from Bihar that has officially received the prestigious GI tag.</p>
-            <p class="item-desc">It originally started as an eco-friendly way to recycle old soft fabrics into warm quilts by layering old cloth pieces and using fine running stitches. Rural artisans transformed this basic stitching into a powerful canvas for creative expression.</p>
-            <p class="item-desc">Today, women use colorful threads to beautifully embroider detailed stories of village life, old rituals, natural elements, and relevant social awareness issues onto fabrics.</p>
-        </div>
+        <!-- 5. Sujini Embroidery -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">GI-Tagged Textile</span>
+                <img src="culture_images/Sujini Embroidery.webp" alt="Sujini Embroidery">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Sujini Embroidery</h3>
+                    <p>An ancient rural quilting tradition where women stitch layers of soft recycled cloth together using fine running stitches to narrate stories of village life, nature, and social empowerment.</p>
+                </div>
+                <div class="culture-footer">Region: Bhusura, Muzaffarpur</div>
+            </div>
+        </article>
 
-        <!-- 8 -->
-        <div class="item-section">
-            <h2 class="item-title">8. Muzaffarpur Lac Bangle Craft - Traditional auspicious bangles.</h2>
-            <img src="culture_images/Muzaffarpur Lac Bangle Craft.jpg" alt="Traditional Muzaffarpur Lac Bangles Lahathi" class="item-img">
-            <p class="item-desc">The Lac Bangle Craft, popularly known as 'Lahathi' in Bihar, is a historic and highly auspicious handicraft center centered in the Muzaffarpur district.</p>
-            <p class="item-desc">Unlike regular plastic or glass bangles, these are handmade using natural resin (lac) extracted from trees. Artisans meticulously heat, shape, and decorate these bangles with beautiful stones, mirrors, and intricate golden threads with absolute precision.</p>
-            <p class="item-desc">Lahathi holds an irreplaceable spiritual value in Bihari culture, being a mandatory custom for newlywed brides and celebrated during traditional festivals like Teej and Jitiya as a symbol of prosperity.</p>
-        </div>
+        <!-- 6. Sikki Grass Craft -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">Eco-Handicraft</span>
+                <img src="culture_images/Sikki Grass Craft.jpg" alt="Sikki Grass Craft">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Sikki Grass Craft</h3>
+                    <p>Artisans in Mithila weave golden-hued wild Sikki river grass into vibrant baskets (pauti), figurines, and ceremonial boxes dyed with natural colors—an essential part of traditional bridal trousseaus.</p>
+                </div>
+                <div class="culture-footer">Status: GI-Tagged Sustainable Craft</div>
+            </div>
+        </article>
 
-        <!-- 9 -->
-        <div class="item-section">
-            <h2 class="item-title">9. Malmas Mela, Rajgir - Mega spiritual and historical gathering.</h2>
-            <img src="culture_images/Malmas Mela.webp" alt="Malmas Mela" class="item-img">
-            <p class="item-desc">The Malmas Mela in Rajgir is a historic and massive spiritual congregation that uniquely occurs once every three years during the leap month.</p>
-            <p class="item-desc">According to ancient religious beliefs, during this holy month, all the 33 crore deities of Hindu mythology temporary reside in the valley of Rajgir. Millions of pilgrims travel from far across the country to visit the historic city.</p>
-            <p class="item-desc">Devotees perform rituals and take a purifying holy dip in the natural hot sulfur water springs (especially Brahmakund) which are believed to have rich spiritual and medicinal properties.</p>
-        </div>
+        <!-- 7. Muzaffarpur Lac Bangle Craft -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">Royal Craftsmanship</span>
+                <img src="culture_images/Muzaffarpur Lac Bangle Craft.jpg" alt="Muzaffarpur Lac Bangle Craft">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Muzaffarpur Lac Bangle Craft</h3>
+                    <p>Handcrafted from natural tree resin (lah) and studded with sparkling stones and mirrors, Muzaffarpur's bridal lac bangles are revered across India as auspicious symbols of marriage and festivity.</p>
+                </div>
+                <div class="culture-footer">Hub: Islampur, Muzaffarpur</div>
+            </div>
+        </article>
 
-        <!-- 10 -->
-        <div class="item-section">
-            <h2 class="item-title">10. Kohbar Art - Sacred wedding chamber wall art.</h2>
-            <img src="culture_images/Kohbar Art.webp" alt="Kohbar Art" class="item-img">
-            <p class="item-desc">Kohbar Art is a highly auspicious traditional wall painting done inside the special wedding chamber of a newly married couple in Bihar.</p>
-            <p class="item-desc">Filled with deep symbolic patterns like lotus flowers, fishes, birds, tortoises, and bamboo trees, the paintings are highly artistic. Every element represents fertility, lifelong prosperity, love, and protection from negative energies.</p>
-            <p class="item-desc">Painted traditionally with natural colors, Kohbar represents the peak of traditional wedding customs, blessing the bride and groom for a happy married journey ahead.</p>
-        </div>
-    </div>
+        <!-- 8. Mithila Makhana Cultivation -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">GI-Tagged Supercrop</span>
+                <img src="culture_images/Mithila Makhana Cultivation.jpg" alt="Mithila Makhana Cultivation">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Mithila Makhana Heritage</h3>
+                    <p>Bihar produces over 85% of the world's fox nuts (Makhana). Skilled Mallah community divers harvest prickly water-lily seeds from Mithila's wetlands and roast-pop them using ancestral techniques.</p>
+                </div>
+                <div class="culture-footer">Region: Darbhanga, Madhubani &amp; Purnia</div>
+            </div>
+        </article>
 
-    <footer><p>&copy; 2026 Viharan Tourism Guide. Designed with ❤️ for Bihar.</p></footer>
+        <!-- 9. Sonepur Mela -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">Asia's Largest Cattle Fair</span>
+                <img src="culture_images/Sonepur Mela.jpeg" alt="Sonepur Mela">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Sonepur Mela (Harihar Kshetra)</h3>
+                    <p>Held every Kartik Purnima at the sacred confluence of the Ganga and Gandak rivers, this centuries-old fair dates back to Chandragupta Maurya's era, blending holy river baths, folk theater, and vibrant rural trade.</p>
+                </div>
+                <div class="culture-footer">Location: Sonepur, Saran District</div>
+            </div>
+        </article>
+
+        <!-- 10. Malmas Mela -->
+        <article class="culture-card">
+            <div class="culture-img">
+                <span class="culture-tag">Sacred Triennial Fair</span>
+                <img src="culture_images/Malmas Mela.webp" alt="Malmas Mela">
+            </div>
+            <div class="culture-body">
+                <div>
+                    <h3>Malmas Mela, Rajgir</h3>
+                    <p>Observed once every three years during the lunar leap month (Adhik Maas), millions of devotees gather in Rajgir to bathe in the sacred Brahmakund hot springs amidst vibrant illuminated fairs and cultural performances.</p>
+                </div>
+                <div class="culture-footer">Location: Rajgir, Nalanda District</div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        &copy; 2026 Viharan - The Bihar Tourism Guide. All Rights Reserved.
+    </footer>
+
+    <script>
+    </script>
+    <script src="app.js"></script>
 </body>
 </html>

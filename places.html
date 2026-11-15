@@ -1,161 +1,570 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 10 Tourist Places | Viharan</title>
-    
-    <meta name="keywords" content="bihar, bihar tourism, famous places in bihar, bihar food, litti chokha, madhubani painting, nalanda university, rajgir, bodh gaya, viharan, patna sahib, travel bihar, tourist spots, bihari culture">
-    <meta name="description" content="Viharan: The Ultimate Bihar Tourism Guide. Explore top 10 famous places, authentic traditional foods, and rich historical culture.">
-    <meta name="author" content="Viharan Developer">
+    <title>Top 10 Places | Viharan - The Bihar Tourism Guide</title>
+    <meta name="description" content="Explore the top 10 famous tourist places in Bihar including Mahabodhi Temple, Nalanda University, Rajgir, Patna Sahib, and Valmiki National Park.">
 
-    <!-- Custom Royal Heritage Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    
+    <meta name="theme-color" content="#070b14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="responsive.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
-        
-        nav { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: 700; color: #ff5a22; }
-        .nav-links a { text-decoration: none; color: #444; font-weight: 600; margin-left: 25px; transition: color 0.3s; position: relative; padding-bottom: 5px; }
-        .nav-links a:hover, .nav-links a.active { color: #ff5a22; }
-        .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: #ff5a22; border-radius: 2px; }
+        :root {
+            --bg-primary: #070b14;
+            --surface-glass: rgba(17, 25, 45, 0.75);
+            --surface-glass-hover: rgba(24, 35, 62, 0.9);
+            --border-glass: rgba(255, 255, 255, 0.09);
+            --border-accent: rgba(245, 158, 11, 0.45);
+            --accent-gold: #f59e0b;
+            --accent-amber: #fbbf24;
+            --accent-cyan: #38bdf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
 
-        .banner { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Places Bihar banner.jpg'); background-size: cover; background-position: center; height: 300px; display: flex; justify-content: center; align-items: center; color: white; text-align: center; margin-bottom: 40px; }
-        .banner h1 { font-size: 40px; font-weight: 700; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .content-container { max-width: 900px; margin: 0 auto; padding: 0 20px 50px 20px; }
-        
-        /* Added scroll-margin-top so navigation bar doesn't cover top part when coming from index.html */
-        .place-section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); scroll-margin-top: 30px; }
-        .place-title { font-size: 26px; color: #222; margin-bottom: 15px; font-weight: 700; border-left: 5px solid #ff5a22; padding-left: 15px; text-align: left; }
-        
-        .place-img { width: 100%; height: auto; max-height: 500px; object-fit: contain; border-radius: 8px; margin-bottom: 20px; display: block; }
-        
-        /* Premium Gradient Accent Bar Style */
-        .place-desc { font-size: 16px; color: #555; text-align: justify; margin-bottom: 15px; position: relative; padding-left: 20px !important; }
-        .place-desc::before { content: ""; position: absolute; left: 0; top: 6px; width: 4px; height: 18px; background: linear-gradient(135deg, #ff5a22, #ff7a45); border-radius: 20px; box-shadow: 0 2px 6px rgba(255, 90, 34, 0.3); }
-        
-        footer { background-color: #222; color: white; text-align: center; padding: 20px; font-size: 14px; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.65;
+            background-image:
+                radial-gradient(circle at 15% 12%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.07) 0%, transparent 42%);
+        }
+
+        h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 11, 20, 0.85);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 0.9rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+        .logo-badge {
+            width: 42px; height: 42px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent-gold), #d97706);
+            display: grid; place-items: center;
+            font-family: 'Cinzel', serif; font-weight: 800; font-size: 1.35rem; color: #070b14;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif; font-size: 1.55rem; font-weight: 800;
+            background: linear-gradient(90deg, #fff, var(--accent-amber));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links { display: flex; list-style: none; gap: 8px; }
+
+        .nav-links a {
+            text-decoration: none; color: var(--text-secondary); font-weight: 600;
+            font-size: 0.94rem; padding: 0.55rem 1.1rem; border-radius: 999px; transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #070b14;
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-gold));
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+        }
+
+        .menu-toggle {
+            display: none; background: var(--surface-glass); border: 1px solid var(--border-glass);
+            color: var(--text-primary); font-size: 1.4rem; padding: 6px 12px; border-radius: 10px; cursor: pointer;
+        }
+
+        /* Banner */
+        .page-banner {
+            position: relative;
+            min-height: 52vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 5%;
+            overflow: hidden;
+        }
+
+        .banner-bg {
+            position: absolute; inset: 0;
+            background: url('Places Bihar banner.jpg') center/cover no-repeat;
+            filter: brightness(0.36) saturate(1.15);
+            z-index: -2;
+        }
+
+        .banner-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(7, 11, 20, 0.55), var(--bg-primary));
+            z-index: -1;
+        }
+
+        .page-banner h1 {
+            font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+            background: linear-gradient(135deg, #fff, #fde68a, #f59e0b);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 0.8rem;
+        }
+
+        .page-banner p {
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.08rem;
+        }
+
+        /* Filter Bar */
+        .filter-wrap {
+            max-width: 1200px;
+            margin: 1rem auto 3rem;
+            padding: 0 5%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.55rem 1.25rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-glass);
+            background: var(--surface-glass);
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-gold));
+            color: #070b14;
+            border-color: transparent;
+        }
+
+        /* Destination Detailed List */
+        .places-container {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+        }
+
+        .place-row {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .place-row:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+            background: var(--surface-glass-hover);
+        }
+
+        .place-row.hidden { display: none; }
+
+        .place-img-box {
+            position: relative;
+            min-height: 290px;
+            overflow: hidden;
+        }
+
+        .place-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .place-row:hover .place-img-box img { transform: scale(1.06); }
+
+        .rank-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-gold));
+            color: #070b14;
+            font-weight: 800;
+            font-size: 0.8rem;
+            padding: 5px 13px;
+            border-radius: 999px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .place-details {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .place-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 0.7rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .place-details h2 {
+            font-size: 1.65rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .place-details p {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .info-box span {
+            display: block;
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .info-box strong {
+            font-size: 0.88rem;
+            color: var(--accent-amber);
+        }
+
+        footer {
+            background: #04070d;
+            border-top: 1px solid var(--border-glass);
+            padding: 2.5rem 5%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 920px) {
+            .place-row { grid-template-columns: 1fr; }
+            .place-img-box { height: 240px; min-height: auto; }
+            .info-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(7, 11, 20, 0.96); backdrop-filter: blur(20px);
+                flex-direction: column; padding: 1.2rem 5%;
+                border-bottom: 1px solid var(--border-glass); display: none;
+            }
+            .nav-links.open { display: flex; }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Viharan</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="food.html">Famous Foods</a>
-            <a href="culture.html">Culture</a>
-            <a href="places.html" class="active">Tourist Places</a>
-            <a href="about.html">About</a>
-        </div>
+    <nav class="navbar">
+        <a href="index.html" class="logo-wrap">
+            <div class="logo-badge">V</div>
+            <span class="logo-text">VIHARAN</span>
+        </a>
+        <button class="install-button" id="installButton" type="button">Install App</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html" class="active">Places</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
     </nav>
+    <p class="install-help" id="installHelp" role="status" aria-live="polite" hidden></p>
 
-    <div class="banner">
-        <h1>Top 10 Famous Tourist Places in Bihar</h1>
+    <header class="page-banner">
+        <div class="banner-bg"></div>
+        <div class="banner-overlay"></div>
+        <div>
+            <h1>Top 10 Must-Visit Places in Bihar</h1>
+            <p>From UNESCO World Heritage monasteries and Mauryan rock-cut caves to pristine Himalayan tiger reserves.</p>
+        </div>
+    </header>
+
+    <div class="filter-wrap">
+        <button class="filter-btn active" data-filter="all">All Destinations (10)</button>
+        <button class="filter-btn" data-filter="unesco">UNESCO &amp; Ancient</button>
+        <button class="filter-btn" data-filter="spiritual">Spiritual Shrines</button>
+        <button class="filter-btn" data-filter="nature">Nature &amp; Architecture</button>
     </div>
 
-    <div class="content-container">
-        <!-- 1 -->
-        <div class="place-section" id="mahabodhi">
-            <h2 class="place-title">1. Mahabodhi Temple, Bodh Gaya - UNESCO World Heritage Site.</h2>
-            <img src="index_images/Mahabodhi Temple.jpg" alt="Mahabodhi Temple" class="place-img">
-            <p class="place-desc">Mahabodhi Temple is a UNESCO World Heritage Site located in Bodh Gaya, Bihar. It is one of the most important Buddhist pilgrimage sites in the world, as it is believed to be the place where Siddhartha Gautama, the Buddha, attained enlightenment under the Bodhi tree.</p>
-            <p class="place-desc">The temple complex consists of a main stupa, several smaller stupas, and various shrines and monasteries. The architecture of the temple is a blend of Indian and Buddhist styles, with intricate carvings and sculptures depicting scenes from the life of the Buddha. The Mahabodhi Temple attracts thousands of pilgrims and tourists every year, who come to pay their respects and seek spiritual solace.</p>
-            <p class="place-desc">Visitors can also explore the nearby Bodhi tree, which is a direct descendant of the original tree under which the Buddha meditated. The temple complex is surrounded by beautiful gardens and offers a serene atmosphere for meditation and reflection. Overall, the Mahabodhi Temple is a must-visit destination for anyone interested in Buddhism, history, and spirituality.</p>
-        </div>
+    <main class="places-container">
 
-        <!-- 2 -->
-        <div class="place-section" id="vikramshila">
-            <h2 class="place-title">2. Vikramshila University, Bhagalpur - Ancient center of Buddhist learning.</h2>
-            <img src="index_images/Vikramshila University.jpg" alt="Vikramshila University Ruins" class="place-img">
-            <p class="place-desc">Vikramshila University was an ancient center of learning located in the present-day Bhagalpur district of Bihar, India. It was established during the Pala dynasty in the 8th century and was one of the two most important centers of Buddhist learning in India, along with Nalanda University. Vikramshila University played a significant role in the development of Buddhist philosophy, literature, and culture.</p>
-            <p class="place-desc">The university was known for its rigorous academic curriculum, which included subjects such as Buddhist philosophy, logic, grammar, medicine, and mathematics. It attracted scholars and students from various parts of India and other countries, including Tibet, China, and Southeast Asia. The university had a well-organized administrative structure and was supported by the royal patronage of the Pala rulers.</p>
-            <p class="place-desc">Vikramshila University was eventually destroyed during the invasions of the 12th century, and its ruins can still be seen today. Archaeological excavations have revealed the remains of the university's buildings, including classrooms, monasteries, and stupas. The site is now a protected monument and serves as a reminder of Bihar's rich educational and cultural heritage.</p>
-        </div>
+        <!-- 1. Mahabodhi Temple -->
+        <article class="place-row" id="mahabodhi" data-category="unesco spiritual">
+            <div class="place-img-box">
+                <span class="rank-tag">#01 &bull; UNESCO Heritage</span>
+                <img src="index_images/Mahabodhi Temple.jpg" alt="Mahabodhi Temple Bodh Gaya">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Bodh Gaya, Gaya District</span></div>
+                    <h2>Mahabodhi Temple Complex</h2>
+                    <p>One of the four holy sites related to the life of Lord Buddha, and the exact spot where he attained supreme enlightenment beneath the sacred Bodhi Tree. Originally built by Emperor Ashoka in the 3rd century BCE, the 55-meter pyramidal brick temple stands as a global beacon of peace and meditation.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Oct – Mar</strong></div>
+                    <div class="info-box"><span>Nearest Airport</span><strong>Gaya International (12 km)</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Sacred Bodhi Tree &amp; Vajrasana</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 3 -->
-        <div class="place-section" id="nalanda">
-            <h2 class="place-title">3. Nalanda University, Nalanda - Ancient center of Buddhist learning.</h2>
-            <img src="index_images/Nalanda University.webp" alt="Ancient brick ruins of Nalanda University" class="place-img">
-            <p class="place-desc">Nalanda University was an ancient center of learning located in the present-day Nalanda district of Bihar, India. It was established during the Gupta dynasty in the 5th century and flourished as a major center of Buddhist education and scholarship for several centuries. Nalanda University attracted students and scholars from various parts of India and other countries, including China, Korea, Japan, Tibet, and Southeast Asia.</p>
-            <p class="place-desc">The university had a well-organized academic structure, with a curriculum that included subjects such as Buddhist philosophy, logic, grammar, medicine, mathematics, and astronomy. It had a large library known as the "Dharmaganja," which housed thousands of manuscripts and texts. The university also had residential facilities for students and teachers, as well as monasteries and temples within its campus.</p>
-            <p class="place-desc">Nalanda University was eventually destroyed during the invasions of the 12th century, and its ruins can still be seen today. Archaeological excavations have revealed the remains of the university's buildings, including classrooms, monasteries, and stupas. The site is now a UNESCO World Heritage Site and serves as a reminder of Bihar's rich educational and cultural heritage.</p>
-        </div>
+        <!-- 2. Nalanda University -->
+        <article class="place-row" id="nalanda" data-category="unesco">
+            <div class="place-img-box">
+                <span class="rank-tag">#02 &bull; UNESCO Heritage</span>
+                <img src="index_images/Nalanda University.webp" alt="Nalanda University">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Nalanda District</span></div>
+                    <h2>Ancient Nalanda Mahavihara</h2>
+                    <p>Founded in the 5th century CE during the Gupta Empire, Nalanda was the world's first great residential international university. For over 800 years, more than 10,000 students and 2,000 scholars from China, Korea, Tibet, and Central Asia studied astronomy, medicine, logic, and Buddhist philosophy here.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Oct – Mar</strong></div>
+                    <div class="info-box"><span>Nearest Station</span><strong>Rajgir / Nalanda</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Sariputta Stupa &amp; Museum</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 4 -->
-        <div class="place-section" id="rajgir">
-            <h2 class="place-title">4. Rajgir, Nalanda - Historic city with rich cultural heritage.</h2>
-            <img src="index_images/Rajgir nalanda.jpg" alt="Rajgir" class="place-img">
-            <p class="place-desc">Rajgir is a historic city located in the Nalanda district of Bihar, India. It is known for its rich cultural and religious heritage, as well as its scenic beauty. Rajgir has been an important center for Buddhism and Jainism, and it is believed to have been the first capital of the Magadha kingdom.</p>
-            <p class="place-desc">The city is surrounded by hills and is home to several ancient monuments, including the ruins of the Rajgir Fort, which dates back to the 6th century BCE. Rajgir is also famous for its hot springs, which are believed to have medicinal properties. The city is a popular destination for pilgrims and tourists alike, who come to explore its historical sites and enjoy its natural beauty.</p>
-            <p class="place-desc">Rajgir is also known for its association with Lord Buddha, who is said to have spent several years in the city, delivering sermons and meditating. The Vulture's Peak, a hill in Rajgir, is believed to be the place where Buddha gave many important teachings. Overall, Rajgir is a must-visit destination for those interested in history, religion, and nature.</p>
-        </div>
+        <!-- 3. Rajgir -->
+        <article class="place-row" id="rajgir" data-category="spiritual nature">
+            <div class="place-img-box">
+                <span class="rank-tag">#03 &bull; Spiritual &amp; Scenic</span>
+                <img src="index_images/Rajgir nalanda.jpg" alt="Rajgir Vishwa Shanti Stupa">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Rajgir, Nalanda District</span></div>
+                    <h2>Rajgir &amp; Vishwa Shanti Stupa</h2>
+                    <p>The ancient capital of the Magadha Empire encircled by seven picturesque hills. Revered by both Buddhists and Jains, Rajgir features the gleaming white Vishwa Shanti Stupa atop Ratnagiri Hill (accessible via aerial ropeway), Gridhakuta (Vulture's Peak), and therapeutic Brahmakund hot springs.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Oct – Mar</strong></div>
+                    <div class="info-box"><span>Attraction</span><strong>Ropeway &amp; Glass Skywalk</strong></div>
+                    <div class="info-box"><span>Significance</span><strong>1st Buddhist Council Site</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 5 -->
-        <div class="place-section" id="patnasahib">
-            <h2 class="place-title">5. Patna Sahib Gurudwara, Patna - Prominent Sikh shrine.</h2>
-            <img src="index_images/Patna Sahib Gurudwara.webp" alt="Patna Sahib Gurudwara" class="place-img">
-            <p class="place-desc">Patna Sahib Gurudwara, also known as Takht Sri Patna Sahib, is a prominent Sikh shrine located in Patna, Bihar, India. It is one of the five Takhts (thrones) of Sikhism and holds great religious significance for Sikhs around the world. The Gurudwara is dedicated to Guru Gobind Singh, the tenth Sikh Guru, who was born in Patna in 1666.</p>
-            <p class="place-desc">The Gurudwara complex consists of several buildings, including the main prayer hall, the Guru's birthplace, and various other facilities for devotees. The architecture of the Gurudwara is a blend of traditional Sikh and Mughal styles, with intricate carvings and beautiful frescoes adorning the walls. The Gurudwara also houses a museum that showcases artifacts related to Guru Gobind Singh and Sikh history.</p>
-            <p class="place-desc">Patna Sahib Gurudwara attracts thousands of pilgrims and tourists every year, who come to pay their respects and seek spiritual solace. The Gurudwara is known for its warm hospitality, and visitors can partake in the community kitchen (Langar) that serves free meals to all. Overall, Patna Sahib Gurudwara is a must-visit destination for those interested in Sikhism, history, and spirituality.</p>
-        </div>
+        <!-- 4. Patna Sahib Gurudwara -->
+        <article class="place-row" id="patnasahib" data-category="spiritual">
+            <div class="place-img-box">
+                <span class="rank-tag">#04 &bull; Sacred Takht</span>
+                <img src="index_images/Patna Sahib Gurudwara.webp" alt="Patna Sahib Gurudwara">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Patna City, Patna</span></div>
+                    <h2>Takht Sri Harmandir Ji Patna Sahib</h2>
+                    <p>Revered as one of the five Takhts (seats of authority) of Sikhism, this magnificent white-marble gurudwara commemorates the birthplace of the tenth Sikh Guru, Sri Guru Gobind Singh Ji (born 1666). Built by Maharaja Ranjit Singh, it houses sacred relics, ancient weapons, and handwritten hukamnamas.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Year-Round (Prakash Parv)</strong></div>
+                    <div class="info-box"><span>Connectivity</span><strong>Patna Sahib Jn. (2 km)</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Guru Ka Langar &amp; Museum</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 6 -->
-        <div class="place-section" id="barabar">
-            <h2 class="place-title">6. Barabar Caves, Jehanabad - Ancient rock-cut caves.</h2>
-            <img src="index_images/Barabar cave.webp" alt="Barabar Caves" class="place-img">
-            <p class="place-desc">The Barabar Caves are a group of ancient rock-cut caves located in the Jehanabad district of Bihar, India. They are believed to have been carved during the Mauryan period (3rd century BCE) and are considered to be some of the oldest surviving rock-cut caves in India. The caves were primarily used by Buddhist monks for meditation and religious practices.</p>
-            <p class="place-desc">The Barabar Caves consist of several chambers, each with a unique architectural style. The most famous caves are the Lomas Rishi Cave and the Sudama Cave, which feature intricately carved entrances and polished interiors. The caves are known for their excellent acoustics, which allowed monks to chant and meditate in a serene environment.</p>
-            <p class="place-desc">The Barabar Caves are an important archaeological and historical site, attracting tourists and researchers interested in ancient Indian architecture and Buddhist history. The caves are surrounded by lush greenery and offer a peaceful setting for visitors to explore and appreciate the rich cultural heritage of Bihar.</p>
-        </div>
+        <!-- 5. Sher Shah Suri Tomb -->
+        <article class="place-row" id="shershah" data-category="nature">
+            <div class="place-img-box">
+                <span class="rank-tag">#05 &bull; Architectural Gem</span>
+                <img src="index_images/sher shah shuri tomb.webp" alt="Sher Shah Suri Tomb">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Sasaram, Rohtas District</span></div>
+                    <h2>Tomb of Sher Shah Suri</h2>
+                    <p>Often hailed as the "Second Taj Mahal of India," this towering 122-foot octagonal mausoleum built in 1545 stands on a stone plinth in the middle of a vast square lake. Crafted from red Chunar sandstone, it represents the pinnacle of Afghan Indo-Islamic architecture in India.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Oct – Mar</strong></div>
+                    <div class="info-box"><span>Built In</span><strong>1545 CE</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Lake Causeway &amp; Grand Dome</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 7 -->
-        <div class="place-section" id="kesaria">
-            <h2 class="place-title">7. Kesaria Stupa, Kesaria - One of the largest stupas in India.</h2>
-            <img src="index_images/Kesaria Stupa.webp" alt="Kesaria Stupa" class="place-img">
-            <p class="place-desc">The Kesaria Stupa is a significant Buddhist monument located in Kesaria, Bihar, India. It is one of the largest stupas in the country and is believed to have been built during the Mauryan period. The stupa is an important site for Buddhist pilgrims and researchers interested in ancient Indian Buddhism.</p>
-            <p class="place-desc">The Kesaria Stupa is constructed in a circular shape and is made of bricks. It stands at a height of approximately 104 feet and has a diameter of around 120 feet. The stupa is surrounded by a series of smaller stupas and other structures, which are believed to have been used for religious and ceremonial purposes. The site has been excavated by archaeologists, revealing various artifacts and inscriptions that provide insights into the history and significance of the stupa.</p>
-            <p class="place-desc">The Kesaria Stupa is an important cultural and historical landmark in Bihar, attracting tourists and pilgrims from around the world. Visitors can explore the site, learn about its history, and appreciate the architectural and artistic achievements of ancient Indian civilization. The stupa is also a place for meditation and reflection, offering a serene environment for those seeking spiritual solace.</p>
-        </div>
+        <!-- 6. Vikramshila University -->
+        <article class="place-row" id="vikramshila" data-category="unesco">
+            <div class="place-img-box">
+                <span class="rank-tag">#06 &bull; Ancient Seat</span>
+                <img src="index_images/Vikramshila University.jpg" alt="Vikramshila University">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Antichak, Bhagalpur District</span></div>
+                    <h2>Vikramshila Mahavihara</h2>
+                    <p>Established by King Dharmapala of the Pala dynasty in the late 8th century CE, Vikramshila rivaled Nalanda as a premier center of Buddhist scholarship. Its massive cruciform central stupa surrounded by 208 monastic cells and terracotta plaques reflects remarkable monastic engineering.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Nov – Feb</strong></div>
+                    <div class="info-box"><span>Distance</span><strong>40 km from Bhagalpur</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Cruciform Stupa &amp; Terracotta Art</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 8 -->
-        <div class="place-section" id="shershah">
-            <h2 class="place-title">8. Sher Shah Suri Tomb, Sasaram - Beautiful lake tomb.</h2>
-            <img src="index_images/sher shah shuri tomb.webp" alt="Sher Shah Suri Tomb" class="place-img">
-            <p class="place-desc">The Sher Shah Suri Tomb is a beautiful lake tomb located in Sasaram, Bihar, India. It is the final resting place of Sher Shah Suri, the founder of the Suri dynasty and a prominent ruler of India during the 16th century. The tomb is an architectural marvel and is considered one of the finest examples of Indo-Islamic architecture in India.</p>
-            <p class="place-desc">The tomb is built on a raised platform in the middle of an artificial lake, creating a stunning reflection of the structure in the water. The tomb is constructed using red sandstone and features intricate carvings, arches, and domes. The main chamber houses the cenotaph of Sher Shah Suri, while the surrounding area includes gardens and pathways for visitors to explore.</p>
-            <p class="place-desc">The Sher Shah Suri Tomb is a popular tourist destination and attracts visitors from around the world who come to admire its architectural beauty and historical significance. The serene setting of the tomb, combined with its rich history, makes it a must-visit location for those interested in India's cultural heritage.</p>
-        </div>
+        <!-- 7. Kesaria Stupa -->
+        <article class="place-row" id="kesaria" data-category="unesco spiritual">
+            <div class="place-img-box">
+                <span class="rank-tag">#07 &bull; Tallest Stupa</span>
+                <img src="index_images/Kesaria Stupa.webp" alt="Kesaria Stupa">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Kesaria, East Champaran</span></div>
+                    <h2>Kesaria Buddha Stupa</h2>
+                    <p>Rising to a staggering height of 104 feet with a circumference of nearly 1,400 feet, Kesaria Stupa is recognized as the tallest and largest excavated Buddhist stupa in the world. It marks the spot where Lord Buddha gifted his alms bowl to the Licchavis of Vaishali before attaining Mahaparinirvana.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Oct – Mar</strong></div>
+                    <div class="info-box"><span>Height</span><strong>104 Feet (31.7 m)</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Multi-Tiered Brick Terraces</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 9 -->
-        <div class="place-section" id="valmiki">
-            <h2 class="place-title">9. Valmiki National Park, West Champaran - Nature and Wildlife.</h2>
-            <img src="index_images/Valmiki National Park.jpg" alt="Valmiki National Park" class="place-img">
-            <p class="place-desc">Valmiki National Park is a protected area located in the West Champaran district of Bihar, India. It is named after the sage Valmiki, the author of the epic Ramayana. The park is known for its rich biodiversity and is home to a variety of flora and fauna, including several endangered species.</p>
-            <p class="place-desc">The park covers an area of approximately 800 square kilometers and is characterized by dense forests, grasslands, and wetlands. It is a popular destination for wildlife enthusiasts and nature lovers, offering opportunities for bird watching, trekking, and wildlife safaris. The park is home to several species of mammals, birds, reptiles, and amphibians, making it an important conservation area in the region.</p>
-            <p class="place-desc">Valmiki National Park is also known for its scenic beauty, with picturesque landscapes and serene surroundings. Visitors can explore the park's various trails and enjoy the tranquility of nature. The park is a great place for eco-tourism and provides an opportunity to learn about the importance of wildlife conservation and environmental protection.</p>
-        </div>
+        <!-- 8. Jal Mandir Pawapuri -->
+        <article class="place-row" id="jalmandir" data-category="spiritual">
+            <div class="place-img-box">
+                <span class="rank-tag">#08 &bull; Jain Tirtha</span>
+                <img src="index_images/jal mandir.webp" alt="Jal Mandir Pawapuri">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Pawapuri, Nalanda District</span></div>
+                    <h2>Jal Mandir, Pawapuri</h2>
+                    <p>Set in the center of a tranquil tank filled with blooming pink and white lotuses, Jal Mandir is one of the holiest pilgrimage destinations for Jains worldwide. It marks the sacred cremation site of Lord Mahavira, the 24th Tirthankara, who attained Moksha here around 527 BCE.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Oct – Mar (Diwali Festival)</strong></div>
+                    <div class="info-box"><span>Architecture</span><strong>White Marble Vimana</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>600-ft Stone Bridge &amp; Lotus Lake</strong></div>
+                </div>
+            </div>
+        </article>
 
-        <!-- 10 -->
-        <div class="place-section" id="jalmandir">
-            <h2 class="place-title">10. Jal Mandir, Pawapuri - Sacred floating temple.</h2>
-            <img src="index_images/jal mandir.webp" alt="Jal Mandir" class="place-img">
-            <p class="place-desc">Jal Mandir is a sacred floating temple located in Pawapuri, Bihar, India. It is an important pilgrimage site for Jains and is believed to be the place where Lord Mahavira, the 24th Tirthankara of Jainism, attained nirvana. The temple is situated in the middle of a lotus-filled pond, creating a serene and picturesque setting.</p>
-            <p class="place-desc">The temple is constructed using white marble and features intricate carvings and sculptures depicting scenes from the life of Lord Mahavira. Devotees and visitors can reach the temple by crossing a small bridge that connects the temple to the shore. The pond surrounding the temple is considered sacred, and it is believed that taking a dip in its waters can purify one's soul.</p>
-            <p class="place-desc">Jal Mandir attracts thousands of pilgrims and tourists every year, who come to pay their respects and seek spiritual solace. The temple is a symbol of peace and devotion, and its tranquil surroundings make it a perfect place for meditation and reflection. Overall, Jal Mandir is a must-visit destination for those interested in Jainism, spirituality, and architectural beauty.</p>
-        </div>
-    </div>
+        <!-- 9. Barabar Caves -->
+        <article class="place-row" id="barabar" data-category="unesco">
+            <div class="place-img-box">
+                <span class="rank-tag">#09 &bull; Mauryan Wonder</span>
+                <img src="index_images/Barabar cave.webp" alt="Barabar Caves">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Makhdumpur, Jehanabad District</span></div>
+                    <h2>Barabar Rock-Cut Caves</h2>
+                    <p>Carved out of monolithic granite hills during the reign of Emperor Ashoka (3rd century BCE), Barabar Caves are India's oldest surviving rock-cut caves. The Lomas Rishi Cave features an iconic chaitya arch facade, while the interiors boast an astonishing mirror-like polish and uncanny acoustic echo.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Oct – Mar</strong></div>
+                    <div class="info-box"><span>Era</span><strong>3rd Century BCE (Mauryan)</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Lomas Rishi Arch &amp; Echo Halls</strong></div>
+                </div>
+            </div>
+        </article>
 
-    <footer><p>&copy; 2026 Viharan Tourism Guide. Designed with ❤️ for Bihar.</p></footer>
+        <!-- 10. Valmiki National Park -->
+        <article class="place-row" id="valmiki" data-category="nature">
+            <div class="place-img-box">
+                <span class="rank-tag">#10 &bull; Wildlife Reserve</span>
+                <img src="index_images/Valmiki National Park.jpg" alt="Valmiki National Park">
+            </div>
+            <div class="place-details">
+                <div>
+                    <div class="place-meta"><span>&#128205; Valmikinagar, West Champaran</span></div>
+                    <h2>Valmiki Tiger Reserve &amp; National Park</h2>
+                    <p>Located at the foothills of the Himalayas along the Indo-Nepal border and the Gandak River, Valmiki National Park is Bihar's only Tiger Reserve. Spanning over 890 sq. km of lush sal forests and grasslands, it shelters Royal Bengal Tigers, Indian rhinoceroses, leopards, and over 250 bird species.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box"><span>Best Time</span><strong>Nov – Apr</strong></div>
+                    <div class="info-box"><span>Activities</span><strong>Jungle Safari &amp; River Rafting</strong></div>
+                    <div class="info-box"><span>Highlight</span><strong>Royal Bengal Tigers &amp; Terai Mist</strong></div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        &copy; 2026 Viharan - The Bihar Tourism Guide. All Rights Reserved.
+    </footer>
+
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const placeRows = document.querySelectorAll('.place-row');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+
+                placeRows.forEach(row => {
+                    if (filter === 'all' || row.dataset.category.includes(filter)) {
+                        row.classList.remove('hidden');
+                    } else {
+                        row.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="app.js"></script>
 </body>
 </html>

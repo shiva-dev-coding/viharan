@@ -1,6 +1,10 @@
 {
     "name": "Viharan - Bihar Tourism Guide",
     "short_name": "Viharan",
+    "description": "Explore Bihar's destinations, food, culture, and heritage with Viharan.",
+    "id": "./",
+    "start_url": "./index.html",
+    "scope": "./",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -13,7 +17,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#1e293b",
-    "background_color": "#1e293b",
-    "display": "standalone"
+    "theme_color": "#070b14",
+    "background_color": "#070b14",
+    "display": "standalone",
+    "display_override": ["standalone", "minimal-ui"]
 }

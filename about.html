@@ -1,121 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Bihar | Tourism & Heritage</title>
+    <title>About Bihar &amp; Viharan | Viharan - The Bihar Tourism Guide</title>
+    <meta name="description" content="Learn about Viharan and the extraordinary historical, spiritual, and cultural legacy of Bihar—The Land of Enlightenment.">
 
-    <meta name="keywords" content="bihar, bihar tourism, famous places in bihar, bihar food, litti chokha, madhubani painting, nalanda university, rajgir, bodh gaya, viharan, patna sahib, travel bihar, tourist spots, bihari culture">
-    <meta name="description" content="Viharan: The Ultimate Bihar Tourism Guide. Explore top 10 famous places, authentic traditional foods, and rich historical culture.">
-    <meta name="author" content="Viharan Developer">
-
-    <!-- Custom Royal Heritage Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    
+    <meta name="theme-color" content="#070b14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="responsive.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Viharan - Explore the Soul of Bihar">
-    <meta property="og:description" content="Discover top 10 places, authentic foods, and vibrant culture of Bihar.">
-    <meta property="og:image" content="index_images/Bihar image.webp">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKINGID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-TRACKINGID');
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
-        
-        nav { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: 700; color: #ff5a22; }
-        .nav-links a { text-decoration: none; color: #444; font-weight: 600; margin-left: 25px; transition: color 0.3s; position: relative; padding-bottom: 5px; }
-        .nav-links a:hover, .nav-links a.active { color: #ff5a22; }
-        .nav-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: #ff5a22; border-radius: 2px; }
-
-        .banner { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('About Bihar banner.jpg'); background-size: cover; background-position: center; height: 300px; display: flex; justify-content: center; align-items: center; color: white; text-align: center; margin-bottom: 40px; }
-        .banner h1 { font-size: 40px; font-weight: 700; }
-
-        .content-container { max-width: 900px; margin: 0 auto; padding: 0 20px 50px 20px; }
-        .item-section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .item-title { font-size: 26px; color: #222; margin-bottom: 15px; font-weight: 700; border-left: 5px solid #ff5a22; padding-left: 15px; text-align: left; }
-        .item-img { width: 100%; max-height: auto; object-fit: content; border-radius: 8px; margin-bottom: 20px; display: block; }
-        .item-desc { font-size: 16px; color: #555; text-align: justify; margin-bottom: 15px; }
-        
-        .credit-section { background: #f8fafc !important; border-left: 5px solid #64748b !important; }
-        .credit-title { color: #1e293b !important; border-left: 5px solid #64748b !important; }
-        
-        footer { background-color: #222; color: white; text-align: center; padding: 20px; font-size: 14px; }
-
-        .item-desc, .place-desc {
-        position: relative;
-        padding-left: 20px !important; /* Text ko thoda aage shift karne ke liye */}
-
-        .item-desc::before, .place-desc::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 6px; /* Text ke center me align karne ke liye */
-        width: 4px;
-        height: 18px;
-        background: linear-gradient(135deg, #ff5a22, #ff7a45); /* Dual tone premium orange gradient */
-        border-radius: 20px; /* Rounded corners jo ekdum modern lagte hain */
-        box-shadow: 0 2px 6px rgba(255, 90, 34, 0.3); /* Halka sa orange glow effect */
+        :root {
+            --bg-primary: #070b14;
+            --surface-glass: rgba(17, 25, 45, 0.75);
+            --border-glass: rgba(255, 255, 255, 0.09);
+            --border-accent: rgba(245, 158, 11, 0.45);
+            --accent-gold: #f59e0b;
+            --accent-amber: #fbbf24;
+            --accent-cyan: #38bdf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            background-image:
+                radial-gradient(circle at 14% 16%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 86% 76%, rgba(56, 189, 248, 0.07) 0%, transparent 42%);
+        }
+
+        h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+
+        .navbar {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(7, 11, 20, 0.85); backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 0.9rem 5%; display: flex; align-items: center; justify-content: space-between;
+        }
+
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+        .logo-badge {
+            width: 42px; height: 42px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent-gold), #d97706);
+            display: grid; place-items: center;
+            font-family: 'Cinzel', serif; font-weight: 800; font-size: 1.35rem; color: #070b14;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif; font-size: 1.55rem; font-weight: 800;
+            background: linear-gradient(90deg, #fff, var(--accent-amber));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links { display: flex; list-style: none; gap: 8px; }
+
+        .nav-links a {
+            text-decoration: none; color: var(--text-secondary); font-weight: 600;
+            font-size: 0.94rem; padding: 0.55rem 1.1rem; border-radius: 999px; transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #070b14;
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-gold));
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+        }
+
+        .menu-toggle {
+            display: none; background: var(--surface-glass); border: 1px solid var(--border-glass);
+            color: var(--text-primary); font-size: 1.4rem; padding: 6px 12px; border-radius: 10px; cursor: pointer;
+        }
+
+        .page-banner {
+            position: relative; min-height: 52vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 4rem 5%; overflow: hidden;
+        }
+
+        .banner-bg {
+            position: absolute; inset: 0;
+            background: url('About Bihar banner.jpg') center/cover no-repeat;
+            filter: brightness(0.38) saturate(1.15);
+            z-index: -2;
+        }
+
+        .banner-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(7, 11, 20, 0.5), var(--bg-primary));
+            z-index: -1;
+        }
+
+        .page-banner h1 {
+            font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+            background: linear-gradient(135deg, #fff, #fde68a, #f59e0b);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 0.8rem;
+        }
+
+        .page-banner p { color: var(--text-secondary); max-width: 680px; margin: 0 auto; font-size: 1.08rem; }
+
+        .about-section {
+            max-width: 1180px;
+            margin: 2.5rem auto 5rem;
+            padding: 0 5%;
+        }
+
+        .spotlight-card {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 2.5rem;
+            align-items: center;
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 2.4rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .spotlight-card img {
+            width: 100%;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-accent);
+            object-fit: cover;
+        }
+
+        .tag {
+            color: var(--accent-cyan);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .spotlight-card h2 {
+            font-size: 1.9rem;
+            color: var(--accent-amber);
+            margin-bottom: 1rem;
+        }
+
+        .spotlight-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 3.5rem;
+        }
+
+        .pillar-card {
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-accent);
+        }
+
+        .pillar-card h3 {
+            color: var(--accent-amber);
+            font-size: 1.3rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .pillar-card p {
+            color: var(--text-secondary);
+            font-size: 0.94rem;
+        }
+
+        .facts-table-wrap {
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            overflow-x: auto;
+        }
+
+        .facts-table-wrap h2 {
+            font-size: 1.65rem;
+            color: var(--text-primary);
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        th {
+            color: var(--accent-amber);
+            font-weight: 700;
+            width: 32%;
+        }
+
+        td { color: var(--text-secondary); }
+
+        tr:last-child th, tr:last-child td { border-bottom: none; }
+
+        footer {
+            background: #04070d; border-top: 1px solid var(--border-glass);
+            padding: 2.5rem 5%; text-align: center; color: var(--text-muted); font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .spotlight-card { grid-template-columns: 1fr; }
+            .pillars-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(7, 11, 20, 0.96); backdrop-filter: blur(20px);
+                flex-direction: column; padding: 1.2rem 5%;
+                border-bottom: 1px solid var(--border-glass); display: none;
+            }
+            .nav-links.open { display: flex; }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Viharan</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="food.html">Famous Foods</a>
-            <a href="culture.html">Culture</a>
-            <a href="places.html">Tourist Places</a>
-            <a href="about.html" class="active">About</a>
-        </div>
+    <nav class="navbar">
+        <a href="index.html" class="logo-wrap">
+            <div class="logo-badge">V</div>
+            <span class="logo-text">VIHARAN</span>
+        </a>
+        <button class="install-button" id="installButton" type="button">Install App</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+        </ul>
     </nav>
+    <p class="install-help" id="installHelp" role="status" aria-live="polite" hidden></p>
 
-    <div class="banner">
-        <h1>About The Gateway of Heritage</h1>
-    </div>
+    <header class="page-banner">
+        <div class="banner-bg"></div>
+        <div class="banner-overlay"></div>
+        <div>
+            <h1>About Viharan &amp; Bihar</h1>
+            <p>Derived from the Sanskrit word "Vihara" (meaning sacred monastery and serene wandering), Viharan celebrates Bihar's eternal legacy.</p>
+        </div>
+    </header>
 
-    <div class="content-container">
-        <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px;">This tourism initiative is dedicated to uncovering the glorious past, rich spiritual soil, and welcoming essence of Bihar for travelers around the globe.</p>
+    <main class="about-section">
 
-        <!-- 1 -->
-        <div class="item-section">
-            <h2 class="item-title">The Land of Enlightenment</h2>
-            <img src="about_images/The Land of Enlightenment.webp" alt="Large seated Buddha statue" class="item-img">
-            <p class="item-desc">Bihar is beautifully situated in the eastern plains of India, blessed with the holy waters of the Ganges river that splits the state into two rich halves. The name Bihar comes from the Sanskrit word 'Vihara', which literally means Buddhist monasteries, perfectly matching its identity.</p>
-            <p class="item-desc">For thousands of years, this land served as the powerhouse of ancient India. It is the sacred soil where Prince Siddhartha meditated to become Lord Buddha, where Lord Mahavira taught non-violence, and where the world's first democratic roots were planted in Vaishali.</p>
+        <div class="spotlight-card">
+            <img src="about_images/The Land of Enlightenment.webp" alt="The Land of Enlightenment Bodh Gaya">
+            <div>
+                <span class="tag">The Land of Enlightenment</span>
+                <h2>Why Bihar Matters to the World</h2>
+                <p>Few regions on Earth rival Bihar's contribution to human philosophy, governance, and science. From the ancient Republic of Vaishali—the world's earliest organized democracy—to Emperor Ashoka's edicts of peace, Bihar laid the moral foundations of Indian civilization.</p>
+                <p>Mathematician and astronomer Aryabhata pioneered the concept of zero and planetary motion in ancient Kusumapura (Patna), while global seekers walked the cloisters of Nalanda and Vikramshila.</p>
+            </div>
         </div>
 
-        <!-- 2 -->
-        <div class="item-section">
-            <h2 class="item-title">Why We Showcase Bihar</h2>
-            <p class="item-desc">Many people know Bihar through history textbooks, but our true goal is to bring its living, breathing culture straight to your screens. From the architectural marvels of ancient Nalanda to the lip-smacking taste of pure ghee Litti Chokha, Bihar is an emotion waiting to be experienced.</p>
-            <p class="item-desc">Whether you are a history lover, a spiritual seeker, or a traveler looking for authentic rural Indian hospitality, this portal serves as your complete guide to planning an unforgettable journey into the heart of India's golden heritage.</p>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <h3>&#127963; Our Mission</h3>
+                <p>To showcase Bihar's authentic historical monuments, sacred pilgrimage circuits, GI-tagged arts, and culinary heritage in a modern, accessible digital experience for travelers worldwide.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>&#128329; Multi-Faith Harmony</h3>
+                <p>Bihar is a unique spiritual confluence where Hinduism, Buddhism, Jainism, Sikhism, and Sufism share centuries of peaceful coexistence and sacred landmarks.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>&#127806; Living Traditions</h3>
+                <p>Beyond ancient ruins, Bihar thrives through its warm hospitality, lyrical languages (Maithili, Bhojpuri, Magahi, Angika, Bajjika), and vibrant rural artistry.</p>
+            </div>
         </div>
 
-        <!-- Credits -->
-        <div class="item-section credit-section">
-            <h2 class="item-title credit-title">Project Credits</h2>
-            <p class="item-desc">This responsive and modern tourism platform is proudly conceptualized and developed to showcase the true cultural essence of Bihar. Built using clean HTML5 structures and custom premium CSS styling for an optimal reading experience.</p>
+        <div class="facts-table-wrap">
+            <h2>Bihar at a Glance</h2>
+            <table>
+                <tr>
+                    <th>Capital City</th>
+                    <td>Patna (Ancient Pataliputra)</td>
+                </tr>
+                <tr>
+                    <th>State Foundation Day</th>
+                    <td>22 March (Bihar Diwas)</td>
+                </tr>
+                <tr>
+                    <th>Major Languages</th>
+                    <td>Hindi, Maithili, Bhojpuri, Magahi, Angika, Bajjika, Urdu</td>
+                </tr>
+                <tr>
+                    <th>UNESCO World Heritage Sites</th>
+                    <td>Mahabodhi Temple Complex (Bodh Gaya) &amp; Nalanda Mahavihara</td>
+                </tr>
+                <tr>
+                    <th>State Symbols</th>
+                    <td>Tree: Peepal (Bodhi Tree) &bull; Flower: Kachnar &bull; Bird: House Sparrow &bull; Animal: Gaur</td>
+                </tr>
+                <tr>
+                    <th>Prominent GI-Tagged Products</th>
+                    <td>Madhubani Painting, Silao Khaja, Mithila Makhana, Bhagalpuri Silk, Shahi Litchi, Katarni Rice, Jardalu Mango</td>
+                </tr>
+            </table>
         </div>
-    </div>
 
-    <footer><p>&copy; 2026 Viharan Tourism Guide. Designed with ❤️ for Bihar.</p></footer>
+    </main>
+
+    <footer>
+        &copy; 2026 Viharan - The Bihar Tourism Guide. Crafted with pride for Bihar's Heritage.
+    </footer>
+
+    <script>
+    </script>
+    <script src="app.js"></script>
 </body>
 </html>
